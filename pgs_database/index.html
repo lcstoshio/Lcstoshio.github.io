@@ -1,0 +1,98 @@
+# BHRC Polygenic Score Database
+**Author:** Lucas Toshio Ito – UNIFESP - lucas.toshio@unifesp.br
+**Supervisor:** Marcos Leite Santoro - UNIFESP - santoro@unifesp.br  
+**Genetics Coordinator:** Síntia Belangero - UNIFESP - sinbelangero@gmail.com  
+
+**Date of last update:** April 4th, 2025
+
+<details>
+  <summary><strong> Updates April 4th, 2025 </strong></summary>
+
+  - The previous version of the Polygenic Score Database was based solely on genotyped variants. In this release, we have imputed the genetic data to include additional variants in the score calculation, enhancing prediction accuracy.  
+  - Initially, this database was created exclusively for probands. Now, PGS have been calculated for each phenotype in all parents with genotyped data as well. See 'Use with caution 6 - Family-based analysis’.  
+  - New phenotypes have been added, and some existing ones have been updated based on the latest published GWAS.  
+</details>
+<br />
+
+This Polygenic Score (PRS/PGS) Database stores results for several phenotypes in the Brazilian High-Risk Cohort for Mental Health Conditions (BHRC). Out of the 2,511 probands in the study, 2,175 underwent genotyping and passed quality control (QC), so only these individuals can be used for genetic analysis. The PGS value is based solely on the individual’s genetic data and the summary statistics used. Therefore, regardless of the number of individuals analyzed, this value will remain consistent.  
+
+### Overall methodological description
+We calculated the PGS for the participants using PRS-CS v1.0.0 software ([Ge et al., 2019](https://doi.org/10.1038/s41467-019-09718-5)), based on summary statistics from prior genome-wide association studies (GWAS) for various phenotypes, primarily for the major psychiatric disorders.
+
+PRS-CS applies a continuous Bayesian shrinkage parameter to estimate the mean posterior effect size for a GWAS, incorporating an external 1000 Genomes European Linkage Disequilibrium (LD) panel. The global shrinkage parameter for PRS-CS was derived from the data using a fully Bayesian approach, with other parameters set to default. The Plink v1.9 score function was used to calculate individual PGSs, which were then standardized in R to have a mean of 0 and a standard deviation of 1.
+
+### Authorship
+All papers utilizing genetic data from the cohort should invite the Genetics Coordinator, Prof. Dra. Síntia Belangero - UNIFESP (sinbelangero@gmail.com), as a co-author. The Genetics Coordinator will determine who else should be included to assist with the analysis and be listed as co-authors on the paper.
+
+### Important Considerations
+
+<details>
+  <summary><strong> Use with caution 1 - Principal component analysis </strong></summary>
+  These scores should be adjusted using the principal components of the genotyping data (PCA) in each subsequent analysis (e.g., as covariates in regression). Since the value of the principal components (PCs) varies depending on the number of individuals included, you should not use the available PCs (N=2175) if you're working with a subsample. We have calculated the first 20 PCs ("PCs_BHRC_pca20.eigenvec"), but the authors can choose how many to use as covariates. We recommend using at least 4, although using 10 or more is more common and may be more easily accepted by reviewers. To obtain a subsample-specific PC file, please email us with your request, copying your PI and the main contact in the cohort.
+</details>
+<br />
+
+<details>
+  <summary><strong> Use with caution 2 - Brazilian Admixture </strong></summary>
+  Brazil is a highly admixed country, with ancestry proportions averaging around 65% European, 25% African, and 10% Amerindigenous, though these percentages vary widely across individuals and regions. Since most GWAS studies are predominantly based on European ancestry, prediction accuracy may be lower for our Brazilian sample. While the representation of diverse ancestries in genetic studies has improved in recent years, it remains an important factor to consider when using and interpreting PGS results.  
+</details>
+<br />
+
+<details>
+  <summary><strong> Use with caution 3 - Checking for more recent GWAS publications </strong></summary>
+  Please note that it is the responsibility of the authors to verify whether the GWAS used is the most up-to-date for the given phenotype. This step is crucial, as using outdated data may lead to issues when publishing articles. If you require the PGS for a phenotype not included in the database or a more current PGS for a specific phenotype, please don't hesitate to contact us.
+</details>
+<br />
+
+<details>
+  <summary><strong> Use with caution 4 - GWAS Sample Size </strong></summary>
+  The sample size of the GWAS used matters a lot! If the PGS you're using is based on a GWAS with only a few thousand participants and includes only a small number of genome-wide associated variants (e.g., some GWAS may have no significant hits below the p-value threshold), the PGS may not be very reliable, but it could change as future GWAS studies increase their sample sizes.
+</details>
+<br />
+
+<details>
+  <summary><strong> Use with caution 5 - Sample relatedness </strong></summary>
+  Among the 2,175 individuals, some exhibit genetic similarities that suggest possible relatedness. We have a list of 18 individuals with a relatedness of at least 2nd degree (>20%) and their corresponding percentage of genetic similarity. It is up to the researcher to decide whether to remove one individual from each related pair or establish a specific relatedness threshold. In genetic studies, a 20% relatedness threshold is commonly used.
+</details>
+<br />
+
+<details>
+  <summary><strong> Use with caution 6 - Family-based analysis </strong></summary>
+  The PGS for the parents of the 2,511 probands have been added to this dataset, including 2144 mothers and 971 fathers. This forms 754 complete trios, 1110 mother-proband duos, and 118 father-proband duos. Given the significant impact of relatedness in genetic studies, any project involving both probands and their parents must account for this factor to avoid bias in the results. To maintain methodological rigor and ensure proper organization of the dataset, the PGS and PCs for parents are stored separately and are available upon request.
+</details>
+<br />
+
+### Files
+In each folder the PRS-CS generated files are organized as:
+  - **PRSCS_”Pheno”_”Year”_Score.profile:** Main file from PRS-CS with the PGS value of each individual (ident, Group, PGS Value, Standardized PGS Value (z-score)).
+  - **PRSCS_”Pheno”_”Year”_Score.snp:** List of the SNPs used in the analysis and their p-value/ effect size (it is sometimes requested before or after publication).
+
+### Phenotypes
+  - **Alzheimer’s Disease (AD) -** [Bellenguez et al., 2022](https://pubmed.ncbi.nlm.nih.gov/35379992/).
+  - **Attention Deficit Hyperactivity Disorder (ADHD) -** [Demontis et al., 2023](https://pubmed.ncbi.nlm.nih.gov/36702997/).
+  - **Anorexia Nervosa (AN) -** [Watson et al., 2019](https://pubmed.ncbi.nlm.nih.gov/31308545/).
+  - **Anxiety Disorder (ANX_EUR) -** [Friligkou et al., 2024](https://pubmed.ncbi.nlm.nih.gov/39294497/).
+  - **Autism Spectrum Disorder (ASD) -** [Grove et al., 2019](https://pubmed.ncbi.nlm.nih.gov/30804558/).
+  - **Bipolar Disorder (BD) -** [O’Connell et al., 2025](https://pubmed.ncbi.nlm.nih.gov/39843750/).
+  - **Cross Disorder (CD) -** [Romero et al., 2022](https://pubmed.ncbi.nlm.nih.gov/36471075/).
+    - Subset Cross Disorder without SCZ (CD_noSCZ)
+  - **Cannabis Use Disorder (CUD_EUR) -** [Levey et al., 2023](https://pubmed.ncbi.nlm.nih.gov/37985822/).
+  - **Childhood Maltreatment (CMT) -** [Warrier et al., 2021](https://pubmed.ncbi.nlm.nih.gov/33740410/).
+  - **Educational Attainment (EA) -** [Okbay et al., 2022](https://pubmed.ncbi.nlm.nih.gov/35361970/).
+  - **Height (HEIGHT) -** [Yengo et al., 2022](https://pubmed.ncbi.nlm.nih.gov/36224396/).
+  - **Hoarding Symptoms (HS) -** [Strom et al., 2022](https://pubmed.ncbi.nlm.nih.gov/36379924/).
+  - **Loneliness (LONELINESS) -** [Day et al., 2019](https://pubmed.ncbi.nlm.nih.gov/29970889/).
+  - **Major Depressive Disorder (MDD_EUR) -** [Adams et al., 2025](https://pubmed.ncbi.nlm.nih.gov/39814019/).
+  - **Neuroticism (NEUROTICISM) -** [Nagel et al., 2018](https://pubmed.ncbi.nlm.nih.gov/29942085/).
+  - **Obsessive Compulsive Disorder (OCD) -** [IOCDF et al., 2018](https://pubmed.ncbi.nlm.nih.gov/28761083/).
+    - Obsessive Compulsive Symptoms (OCS) - [Strom et al., 2024](https://pubmed.ncbi.nlm.nih.gov/38548983/).
+  - **Opioid Use Disorder (OUD_EUR) -** [Deak et al., 2022](https://pubmed.ncbi.nlm.nih.gov/35879402/).
+  - **Parkinson Disease (PARKINSON) -** [GP2 et al., 2025](https://www.medrxiv.org/content/10.1101/2025.03.14.24319455v1).
+  - **Problematic Alcohol Use (PAU) -** [Zhou et al., 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC10719093/).
+  - **Post Traumatic Stress Disorder (PTSD) -** [Nievergelt et al., 2024](https://pubmed.ncbi.nlm.nih.gov/38637617/).
+  - **Suicide Attempt (SA) -** [Docherty et al., 2023](https://pubmed.ncbi.nlm.nih.gov/34861974/).
+  - **Schizophrenia (SCZ) -** [Trubetskoy et al., 2022](https://pubmed.ncbi.nlm.nih.gov/35396580/).
+  - **Suicide Death (SD) -** [Docherty et al., 2020](https://pubmed.ncbi.nlm.nih.gov/32998551/).
+  - **Substance Use Disorder (SUD) -** [Hatoum et al., 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC10217792/).
+  - **Subjective Well Being (SWB) -** [Okbay et al., 2016](https://pubmed.ncbi.nlm.nih.gov/27089181/).
+  - **Tourette Syndrome (TS) -** [Yu et al., 2019](https://pubmed.ncbi.nlm.nih.gov/30818990/).
