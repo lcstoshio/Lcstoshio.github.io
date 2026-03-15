@@ -1,0 +1,17 @@
+.custom-book-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 1rem;
+  margin: 0 0 1.5rem 0;
+  border-radius: 12px;
+  font-size: 0.88rem;
+}
+
+.custom-book-header-left {
+  font-weight: 600;
+}
+
+.custom-book-header-right {
+  font-size: 0.82rem;
+}
