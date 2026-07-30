@@ -1,0 +1,94 @@
+.custom-book-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.7rem 1rem;
+  margin: 0 0 1.75rem;
+  border: 1px solid rgba(42, 101, 133, 0.18);
+  border-radius: 10px;
+  background: rgba(42, 101, 133, 0.07);
+  font-size: 0.86rem;
+}
+
+.custom-book-header-left {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.custom-book-header-right {
+  font-size: 0.82rem;
+  color: var(--bs-secondary-color);
+  text-align: right;
+}
+
+.public-scope {
+  margin: 2rem 0;
+  padding: 1.25rem 1.4rem;
+  border-left: 5px solid #2a6585;
+  border-radius: 0 10px 10px 0;
+  background: rgba(42, 101, 133, 0.08);
+}
+
+.public-scope h3 {
+  margin-top: 0;
+  color: #245a77;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 2rem;
+}
+
+.guide-card {
+  padding: 1.25rem;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 12px;
+  background: var(--bs-body-bg);
+  box-shadow: 0 4px 16px rgba(25, 47, 60, 0.06);
+}
+
+.guide-card h3 {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+.guide-card p:last-child {
+  margin-bottom: 0;
+}
+
+.chapter-meta {
+  margin-bottom: 1.5rem;
+  color: var(--bs-secondary-color);
+  font-size: 0.94rem;
+}
+
+table {
+  font-size: 0.92rem;
+}
+
+.table-responsive,
+.cell-output-display {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 900px) {
+  .guide-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .custom-book-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .custom-book-header-right {
+    text-align: left;
+  }
+}

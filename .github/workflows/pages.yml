@@ -29,10 +29,18 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      - name: Assemble website
+        run: |
+          mkdir -p _site
+          cp -R pages/main-site/. _site/
+          for page in BHRC Covid_WorldData Test Tutorial_Graphs Tutorial_RMarkdown Tutorial_ggplot2 Tutorial_graphPRS; do
+            cp -R "pages/${page}" "_site/${page}"
+          done
+
       - name: Upload website
         uses: actions/upload-pages-artifact@v4
         with:
-          path: site
+          path: _site
 
       - name: Deploy website
         id: deployment

@@ -1,0 +1,93 @@
+---
+title: "Gráficos de PRS"
+author: "Lucas Toshio Ito"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::readthedown:
+  highlight: pygments
+---
+
+[**Página com arquivo do script em RMarkdown**](https://github.com/Lcstoshio/Lcstoshio.github.io/blob/main/Tutorial_RMarkdown/Code.Rmd)
+
+**R Markdown é uma maneira de escrever/gerar relatórios usando o R, e incluir todos os passos das análises, como anotações, código utilizado, gráficos, tabelas e qualquer tipo de resultado.**
+
+Como criar um arquivo R Markdown:  
+File -> New File -> R Markdown ... -> OK  
+Depois que você criar o arquivo você pode alterar o cabeçalho com Título, Nome do autor, Data e Formato do output.  
+Vai ter um monte de texto embaixo do header, pode apagar tudo que estiver lá (é um tutorial básico de R Markdown se quiserem ler 1 vez)  
+
+```
+NÃO APAGAR ESSA PARTE (HEADER DO ARQUIVO):
+---
+title: "Tutorial RMarkdown e Gráficos" # Título do trabalho
+author: "Lucas Toshio Ito" # Nome do Autor
+date: "`r Sys.Date()`" # Data do seu computador (pode só escrever a data também)
+output:
+  rmdformats::readthedown:
+  highlight: pygments # Formato do arquivo exportado
+---
+```
+
+Quer fazer um título e destacar no documento? É só ir adicionando #
+
+# Tutorial RMarkdown!  
+
+## Subtítulo  
+
+### E quanto mais hashtags  
+
+#### menor fica a fonte  
+
+##### E assim vai  
+
+###### Cada vez menor  
+
+Code chunks ou Blocos de código são onde vocês vão escrever os códigos, todo resto do arquivo é tratado como texto simples. Para adicionar blocos de código ou "code chunks" (existem 3 formas): 
+```{r}
+# TODOS CÓDIGOS PRECISAM VIR ESCRITO AQUI DENTRO DESSES BLOCOS
+
+# ```{r} no começo e ``` no final
+# Ctrl + Alt + i
+# Botão "Insert" no canto superior direito -> R
+
+# Nos "code chunks" é necessário usar o símbolo # para escrever comentários igual no RScript
+```
+
+Para rodar um código:
+```{r}
+# Ctrl + Enter
+# Seta verde no canto superior direito do code chunk
+# Botão "Run" no canto superior direito -> Selecionar opção que desejar
+```
+
+Para exportar o documento em outros formatos:
+```{r}
+# Botão "Knit" no topo e selecionar o formato do arquivo (html, pdf, word).
+# O formato do output pode ser editado lá no header também.
+# Existem alguns templates prontos de html bons pra exportar (mudar no header):
+  # rmdformats::readthedown: 
+  # rmdformats::material:
+```
+
+É possível escrever textos como esse, e ainda deixar elementos em **negrito** e em *itálico* (o que também pode ser feito com <b> para negrito</b> e <i> para itálico </i>). 
+
+**Anexar imagens no documento:**  
+O link é o link da imagem no Google :D  
+
+![Legenda da Imagem!](https://w0.peakpx.com/wallpaper/236/769/HD-wallpaper-moon-cat-pretty-wonderful-stunning-adorable-clouds-sweet-nice-art-kitty-black-sky-abstract-cat-cute-fire-awesome-moonlight-cats-beautiful-animal-draw-moon-light-blue-animals.jpg)
+
+**Adicionar links no documento:**  
+Falando em links, você também pode redirecionar as pessoas (qualquer link: vídeos, sites, documentos, etc...). [Cheatsheets RStudio](https://www.rstudio.com/resources/cheatsheets/).
+
+Com o Markdown, você também pode criar:
+
+- Listas
+- Legais
+- Como
+- Essa
+
+Não esqueça da bibliografia, com o [^1][^2][^3] 
+
+[^1]: https://rmarkdown.rstudio.com/lesson-1.html
+[^2]: https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
+[^3]: https://rmarkdown.rstudio.com/authoring_basics.html

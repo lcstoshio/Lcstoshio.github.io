@@ -1,0 +1,256 @@
+---
+title: "Covid World Data"
+author: "Lucas Toshio Ito"
+date: "`r Sys.Date()`"
+output: 
+  rmdformats::readthedown:
+  highlight: pygments
+---
+
+```{r set options, include=FALSE}
+options(width = 700)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, out.width = "100%",
+                      fig.showtext = TRUE, retina = 1)
+```
+
+# **Manipulando banco de dados**
+
+[**PÃ¡gina com arquivo do script em RMarkdown**](https://github.com/Lcstoshio/Lcstoshio.github.io/blob/main/Covid_WorldData/Code.Rmd)
+
+[**Post com script original**](https://towardsdatascience.com/track-covid-19-data-yourself-with-r-eb3e641cd4b3)
+
+```{r}
+#Pacotes
+library(lubridate)
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(utils)
+library(RColorBrewer) #RColorBrewer::display.brewer.all()
+library(showtext)
+library(sysfonts)
+font_add_google("Playfair Display", "Playfair") ## name of Google font, name that will be used in R
+font_add_google("Bangers", "Bangers")
+font_add_google("Merriweather", "Merriweather")
+font_add_google("Lato", "Lato")
+showtext_auto()
+library(scales)
+```
+
+## **Importando banco de dados**
+
+```{r}
+data <- read.csv("https://opendata.ecdc.europa.eu/covid19/nationalcasedeath_archive/csv/", fileEncoding = "UTF-8-BOM")
+str(data)
+```     
+
+## **Contagens Ãºnicas por coluna**
+
+```{r}
+unique(data$country)
+unique(data$country_code)
+unique(data$continent)
+unique(data$indicator)
+```
+
+## **Apagando colunas inÃºteis**
+
+```{r}
+data <- data[,c(1:9)] # remove as colunas source e note
+
+# outra opÃ§Ã£o
+# data$source <- NULL
+# data$note <-NULL
+```
+
+## **Alterando classe de tempo**
+
+```{r}
+# altera a coluna para o formato ano-mes-dia
+class(data$year_week)
+data$year_week <- as.Date(paste(data$year_week,1,sep="-"),"%Y-%U-%u") # ano,semana,dia da semana
+class(data$year_week)
+
+# ordena em ordem ascedente
+data <- data %>% arrange(year_week)
+# data <- data %>% arrange(desc(data$year_week)) # descendente
+```
+
+## **Soma de Casos/Mortes por paÃ­s/continente**
+
+```{r}
+# Remove as linhas com NA na contagem acumulativa
+str(data$cumulative_count)
+sum(is.na(data$cumulative_count))
+data$cumulative_count[is.na(data$cumulative_count)] <- 0
+
+# Remove as linhas com a soma dos continentes (contagem duplicada)
+data <- data[!grepl("total", data$country),]
+
+# Contagem global
+data %>%
+  group_by(indicator)%>%
+  summarise(sum(cumulative_count))
+
+# Total casos/mortes por paÃ­s em ordem descendente
+data %>%
+  group_by(country, indicator) %>% 
+  summarise(soma = sum(cumulative_count)) %>% 
+  arrange(desc(soma))
+```
+
+# **GrÃ¡ficos**
+
+## **GrÃ¡fico de contagens no Brasil**
+
+```{r message=FALSE, warning=FALSE}
+(data %>% filter(country == "Brazil") %>%
+    ggplot(aes(x=year_week, y=cumulative_count, fill=indicator)) + # Coluna de interesse
+    geom_col(position = 'dodge') + # EstÃ©tica das barras e eixo y com frequÃªncia absoluta
+    theme_bw()+
+    theme(legend.position = "none", # FormataÃ§Ã£o dos textos e eixos
+          strip.text = element_text(size=12, color="white", family="Bangers"), 
+          strip.background = element_rect (fill="gray24"),
+          plot.title = element_text(family = "Playfair", color="black", size=20, face="bold.italic"),
+          axis.title = element_text(family = "Lato", color="black", size = 12, face="bold"),
+          axis.text = element_text(family = "Lato", color="black", size = 10, face="bold"),
+          axis.text.y = element_text(angle=45))+
+    labs(title = "Cumulative Cases and Deaths in Brazil", # TÃ­tulo, subtÃ­tulo e tÃ­tulos dos eixos
+         x = "Date (weeks/year)", 
+         y = "Count") + 
+     scale_fill_brewer(palette="Set1") + # Cor das barras
+     scale_color_brewer(palette="Set1") + # Cor do contorno das barras
+     scale_y_continuous(labels = scales::label_comma()) + 
+     facet_wrap(~indicator, nrow = 1, scales = "free")) # Segunda variÃ¡vel separando o grÃ¡fico em mais grÃ¡ficos
+```
+
+## **GrÃ¡fico de contagens no mundo**
+
+```{r message=FALSE, warning=FALSE}
+(data %>%
+    ggplot(aes(x=year_week, y=cumulative_count, fill=indicator)) + # Coluna de interesse
+    geom_col() + # EstÃ©tica das barras e eixo y com frequÃªncia absoluta
+    theme_bw()+
+    theme(legend.position = "none", # FormataÃ§Ã£o dos textos e eixos
+          strip.text = element_text(size=12, color="white", family="Bangers"), 
+          strip.background = element_rect (fill="gray24"),
+          plot.title = element_text(family = "Playfair", color="black", size=20, face="bold.italic"),
+          axis.title = element_text(family = "Lato", color="black", size = 12, face="bold"),
+          axis.text = element_text(family = "Lato", color="black", size = 10, face="bold"),
+          axis.text.y = element_text(angle=45))+
+    labs(title = "Cumulative Cases and Deaths in the World", # TÃ­tulo, subtÃ­tulo e tÃ­tulos dos eixos
+         x = "Date (weeks/year)", 
+         y = "Count") + 
+     scale_fill_brewer(palette="Set1") + # Cor das barras
+     scale_color_brewer(palette="Set1") + # Cor do contorno das barras
+     scale_y_continuous(labels = scales::label_comma()) + 
+     facet_wrap(~indicator, nrow = 1, scales = "free")) # Segunda variÃ¡vel separando o grÃ¡fico em mais grÃ¡ficos
+```
+
+## **GrÃ¡fico de contagens total separado por continente**
+
+```{r message=FALSE, warning=FALSE}
+# Stacked grÃ¡fico de barras
+(data %>%
+    ggplot(aes(x=year_week, y=cumulative_count, fill=continent)) + # Coluna de interesse
+    geom_col(position="stack") + # EstÃ©tica das barras e eixo y com frequÃªncia absoluta
+    theme_bw()+
+    theme(strip.text = element_text(size=12, color="white", family="Bangers"), # FormataÃ§Ã£o dos textos e eixos
+          legend.title = element_text(size=12, color="Black", family="Merriweather", face="bold.italic"),
+          strip.background = element_rect (fill="gray24"),
+          plot.title = element_text(family = "Playfair", color="black", size=20, face="bold.italic"),
+          axis.title = element_text(family = "Lato", color="black", size = 12, face="bold"),
+          axis.text = element_text(family = "Lato", color="black", size = 10, face="bold"),
+          axis.text.y = element_text(angle=45))+
+    labs(title = "Cumulative Cases and Deaths in the World", # TÃ­tulo, subtÃ­tulo e tÃ­tulos dos eixos
+         x = "Date (weeks/year)", 
+         y = "Count",
+         fill = "Continent") + 
+     scale_fill_brewer(palette="Set1") + # Cor das barras
+     scale_color_brewer(palette="Set1") + # Cor do contorno das barras
+     scale_y_continuous(labels = scales::label_comma()) + 
+     facet_wrap(~indicator, nrow = 1, scales = "free")) # Segunda variÃ¡vel separando o grÃ¡fico em mais grÃ¡ficos
+```
+
+## **GrÃ¡fico comparativo de contagens por continente**
+
+```{r}
+# GrÃ¡fico de barras
+# Ver qual continente tem mais casos para ordenar no grÃ¡fico
+order <- data %>%
+  group_by(continent) %>% 
+  summarise(soma = sum(cumulative_count)) %>% 
+  arrange(desc(soma))
+
+(data %>%
+    ggplot(aes(x=year_week, y=cumulative_count, fill=continent)) + # Coluna de interesse
+    geom_col(data=data[data$continent=="Europe",],alpha=0.7) + # EstÃ©tica das barras e eixo y com frequÃªncia absoluta
+    geom_col(data=data[data$continent=="America",],alpha=0.7) +
+    geom_col(data=data[data$continent=="Asia",],alpha=0.7) +
+    geom_col(data=data[data$continent=="Africa",],alpha=0.7) +
+    geom_col(data=data[data$continent=="Oceania",],alpha=0.7) +
+    theme_bw()+
+    theme(strip.text = element_text(size=12, color="white", family="Bangers"), # FormataÃ§Ã£o dos textos e eixos
+          legend.title = element_text(size=12, color="Black", family="Merriweather", face="bold.italic"),
+          strip.background = element_rect (fill="gray24"),
+          plot.title = element_text(family = "Playfair", color="black", size=20, face="bold.italic"),
+          axis.title = element_text(family = "Lato", color="black", size = 12, face="bold"),
+          axis.text = element_text(family = "Lato", color="black", size = 10, face="bold"),
+          axis.text.y = element_text(angle=45))+
+    labs(title = "Cumulative Cases and Deaths by continent", # TÃ­tulo, subtÃ­tulo e tÃ­tulos dos eixos
+         x = "Date (weeks/year)", 
+         y = "Count",
+         fill = "Continent") + 
+     scale_fill_brewer(palette="Set1") + # Cor das barras
+     scale_color_brewer(palette="Set1") + # Cor do contorno das barras
+     scale_y_continuous(labels = scales::label_comma()) + 
+     facet_wrap(~indicator, nrow=1, scales = "free")) # Segunda variÃ¡vel separando o grÃ¡fico em mais grÃ¡ficos
+```
+
+```{r}
+# GrÃ¡fico de pontos
+(data %>%
+    ggplot(aes(x=year_week, y=as.numeric(cumulative_count), color=continent)) + # Coluna de interesse
+    stat_summary(fun.y="sum", geom="point") +
+    theme_bw()+
+    theme(strip.text = element_text(size=12, color="white", family="Bangers"), # FormataÃ§Ã£o dos textos e eixos
+          legend.title = element_text(size=12, color="Black", family="Merriweather", face="bold.italic"),
+          strip.background = element_rect (fill="gray24"),
+          plot.title = element_text(family = "Playfair", color="black", size=20, face="bold.italic"),
+          axis.title = element_text(family = "Lato", color="black", size = 12, face="bold"),
+          axis.text = element_text(family = "Lato", color="black", size = 10, face="bold"),
+          axis.text.y = element_text(angle=45))+
+    labs(title = "Cumulative Cases and Deaths by continent", # TÃ­tulo, subtÃ­tulo e tÃ­tulos dos eixos
+         x = "Date (weeks/year)", 
+         y = "Count",
+         color = "Continent") + 
+     scale_fill_brewer(palette="Set1") + # Cor das barras
+     scale_color_brewer(palette="Set1") + # Cor do contorno das barras
+     scale_y_continuous(labels = scales::label_comma()) +
+     guides(color = guide_legend(override.aes = list(size = 5)))+ # Bolinhas da legenda
+     facet_wrap(~indicator, nrow = 1, scales = "free")) # Segunda variÃ¡vel separando o grÃ¡fico em mais grÃ¡ficos
+```
+
+```{r}
+# Separando em grÃ¡ficos diferentes
+(data %>%
+    ggplot(aes(x=year_week, y=cumulative_count, fill=continent)) + # Coluna de interesse
+    geom_col()+
+    theme_bw()+
+    theme(strip.text = element_text(size=12, color="white", family="Bangers"), # FormataÃ§Ã£o dos textos e eixos
+          legend.title = element_text(size=12, color="Black", family="Merriweather", face="bold.italic"),
+          strip.background = element_rect (fill="gray24"),
+          plot.title = element_text(family = "Playfair", color="black", size=20, face="bold.italic"),
+          axis.title = element_text(family = "Lato", color="black", size = 12, face="bold"),
+          axis.text = element_text(family = "Lato", color="black", size = 10, face="bold"),
+          axis.text.y = element_text(angle=45),
+          axis.text.x = element_text(size = 5))+
+    labs(title = "Cumulative Cases and Deaths by continent", # TÃ­tulo, subtÃ­tulo e tÃ­tulos dos eixos
+         x = "Date (weeks/year)", 
+         y = "Count",
+         fill = "Continent") + 
+     scale_fill_brewer(palette="Set1") + # Cor das barras
+     scale_color_brewer(palette="Set1") + # Cor do contorno das barras
+     scale_y_continuous(labels = scales::label_comma()) + 
+     facet_grid(indicator~continent, scales = "free")) # Segunda variÃ¡vel separando o grÃ¡fico em mais grÃ¡ficos
+```

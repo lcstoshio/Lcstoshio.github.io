@@ -1,0 +1,5099 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Cross-modality sample overlap – BHRC Research Data Guide</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./02r02_neuroimaging.html" rel="prev">
+<link href="./favicon.svg" rel="icon" type="image/svg+xml">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-97451d7704b1253ee1b4bce0ff2280b3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-f17b7ca12e16fa85f65899508e892ab9.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03o_overlap.html">Cross-modality sample overlap</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">BHRC Research Data Guide</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About this guide</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./01t_tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cohort summaries</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01t01_genotyping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Genotyping and polygenic scores</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01t02_neuroimaging.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Neuroimaging sample</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01t03_methylation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Methylation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01t04_rnaseq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">RNA sequencing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01t05_mirna_jess.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">miRNA: Jessica dataset</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01t05_mirna_yanka.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">miRNA: Yanka dataset</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01t05_mirna_all.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">miRNA: combined sample</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01t06_wgs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Whole Genome Sequencing (WGS)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./02r_readmes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data documentation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02r01_pgs_database.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">BHRC Polygenic Score Database v3.0</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02r02_neuroimaging.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">BHRC neuroimaging data</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03o_overlap.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Cross-modality sample overlap</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#cross-modality-overview" id="toc-cross-modality-overview" class="nav-link active" data-scroll-target="#cross-modality-overview">Cross-modality overview</a></li>
+  <li><a href="#pairwise-overlap-by-index-dataset" id="toc-pairwise-overlap-by-index-dataset" class="nav-link" data-scroll-target="#pairwise-overlap-by-index-dataset">Pairwise overlap by index dataset</a>
+  <ul class="collapse">
+  <li><a href="#genotyping-and-polygenic-scores" id="toc-genotyping-and-polygenic-scores" class="nav-link" data-scroll-target="#genotyping-and-polygenic-scores">Genotyping and polygenic scores</a></li>
+  <li><a href="#neuroimaging" id="toc-neuroimaging" class="nav-link" data-scroll-target="#neuroimaging">Neuroimaging</a></li>
+  <li><a href="#methylation" id="toc-methylation" class="nav-link" data-scroll-target="#methylation">Methylation</a></li>
+  <li><a href="#rna-sequencing" id="toc-rna-sequencing" class="nav-link" data-scroll-target="#rna-sequencing">RNA sequencing</a></li>
+  <li><a href="#mirna-jessica" id="toc-mirna-jessica" class="nav-link" data-scroll-target="#mirna-jessica">miRNA (Jessica)</a></li>
+  <li><a href="#mirna-yanka" id="toc-mirna-yanka" class="nav-link" data-scroll-target="#mirna-yanka">miRNA (Yanka)</a></li>
+  <li><a href="#mirna-combined" id="toc-mirna-combined" class="nav-link" data-scroll-target="#mirna-combined">miRNA (combined)</a></li>
+  <li><a href="#whole-genome-sequencing-wgs" id="toc-whole-genome-sequencing-wgs" class="nav-link" data-scroll-target="#whole-genome-sequencing-wgs">Whole-genome sequencing (WGS)</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<div class="custom-book-header">
+  <div class="custom-book-header-left">BHRC Research Data Guide</div>
+  <div class="custom-book-header-right">Public aggregate summaries</div>
+</div>
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Cross-modality sample overlap</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Author: Lucas Toshio Ito</strong><br>
+lucas.toshio.ito@gmail.com<br>
+Universidade Federal de São Paulo (UNIFESP)</p>
+<p><em>Last updated: March 16, 2026</em></p>
+<p>This chapter summarizes how analytic samples overlap across genotyping and polygenic scores, neuroimaging, DNA methylation, RNA sequencing, miRNA, and whole-genome sequencing resources in BHRC.</p>
+<p>All displayed values are aggregate counts or plots. Participant identifiers are used only inside the controlled local analysis workflow to calculate overlap and are not included in the rendered website.</p>
+<!-- Controlled-data preparation -->
+<section id="cross-modality-overview" class="level2">
+<h2 class="anchored" data-anchor-id="cross-modality-overview">Cross-modality overview</h2>
+<p>The heatmap below reports overlap between resources at any observed wave, before modality-specific quality control. Each cell shows the shared raw count and the percentage of the row dataset represented by that overlap. The diagonal is therefore 100%. The two interim miRNA sources are combined for this overview and remain separated in the detailed tables below.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="03o_overlap_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="pairwise-overlap-by-index-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="pairwise-overlap-by-index-dataset">Pairwise overlap by index dataset</h2>
+<p>Percentages in the detailed tables use the named section dataset as the denominator. “Overall” means availability at any observed wave.</p>
+<section id="genotyping-and-polygenic-scores" class="level3">
+<h3 class="anchored" data-anchor-id="genotyping-and-polygenic-scores">Genotyping and polygenic scores</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="qypdomyzth" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qypdomyzth table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#qypdomyzth thead, #qypdomyzth tbody, #qypdomyzth tfoot, #qypdomyzth tr, #qypdomyzth td, #qypdomyzth th {
+  border-style: none;
+}
+
+#qypdomyzth p {
+  margin: 0;
+  padding: 0;
+}
+
+#qypdomyzth .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#qypdomyzth .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#qypdomyzth .gt_title {
+  color: #333333;
+  font-size: 18px;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#qypdomyzth .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#qypdomyzth .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#qypdomyzth .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qypdomyzth .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#qypdomyzth .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#qypdomyzth .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#qypdomyzth .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#qypdomyzth .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#qypdomyzth .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#qypdomyzth .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#qypdomyzth .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#qypdomyzth .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#qypdomyzth .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#qypdomyzth .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#qypdomyzth .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#qypdomyzth .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qypdomyzth .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#qypdomyzth .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#qypdomyzth .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#qypdomyzth .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qypdomyzth .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#qypdomyzth .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#qypdomyzth .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qypdomyzth .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qypdomyzth .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#qypdomyzth .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qypdomyzth .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#qypdomyzth .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qypdomyzth .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#qypdomyzth .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qypdomyzth .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#qypdomyzth .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qypdomyzth .gt_left {
+  text-align: left;
+}
+
+#qypdomyzth .gt_center {
+  text-align: center;
+}
+
+#qypdomyzth .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#qypdomyzth .gt_font_normal {
+  font-weight: normal;
+}
+
+#qypdomyzth .gt_font_bold {
+  font-weight: bold;
+}
+
+#qypdomyzth .gt_font_italic {
+  font-style: italic;
+}
+
+#qypdomyzth .gt_super {
+  font-size: 65%;
+}
+
+#qypdomyzth .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#qypdomyzth .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#qypdomyzth .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#qypdomyzth .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#qypdomyzth .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#qypdomyzth .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#qypdomyzth .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#qypdomyzth .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#qypdomyzth div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<th colspan="6" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="font-weight: bold"><strong>Genotyping - Overlap with Other Biological Variables</strong></th>
+</tr>
+<tr class="gt_col_headings even">
+<th id="Variable" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Variable</th>
+<th id="Wave-0-(N=2240)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 0 (N=2240)</th>
+<th id="Wave-1-(N=2240)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 1 (N=2240)</th>
+<th id="Wave-2-(N=2240)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 2 (N=2240)</th>
+<th id="Wave-3-(N=2240)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 3 (N=2240)</th>
+<th id="Overall-(N=2240)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Overall (N=2240)</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Neuroimaging</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=2240)">731 (32.6%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=2240)">461 (20.6%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=2240)">416 (18.6%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=2240)">767 (34.2%)</td>
+<td class="gt_row gt_center" headers="Overall (N=2240)">1250 (55.8%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">DNA Methylation</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=2240)">367 (16.4%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=2240)">369 (16.5%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=2240)">325 (14.5%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 3 (N=2240)">0 (0.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=2240)">455 (20.3%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">mRNA Sequencing</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=2240)">580 (25.9%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=2240)">437 (19.5%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=2240)">0 (0.0%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=2240)">0 (0.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=2240)">739 (33.0%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Serum EV-miRNA (Jessica)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=2240)">0 (0.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=2240)">120 (5.4%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=2240)">120 (5.4%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 3 (N=2240)">0 (0.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=2240)">0 (0.0%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Serum EV-miRNA (Yanka)</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=2240)">58 (2.6%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=2240)">132 (5.9%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=2240)">132 (5.9%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=2240)">132 (5.9%)</td>
+<td class="gt_row gt_center" headers="Overall (N=2240)">0 (0.0%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Serum EV-miRNA (All)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=2240)">58 (2.6%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=2240)">198 (8.8%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=2240)">198 (8.8%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 3 (N=2240)">132 (5.9%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=2240)">198 (8.8%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Whole Genome Sequencing (WGS)</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=2240)">2196 (98.0%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=2240)">2196 (98.0%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=2240)">2196 (98.0%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=2240)">2196 (98.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=2240)">2196 (98.0%)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="neuroimaging" class="level3">
+<h3 class="anchored" data-anchor-id="neuroimaging">Neuroimaging</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="ieftcjmxsi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ieftcjmxsi table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#ieftcjmxsi thead, #ieftcjmxsi tbody, #ieftcjmxsi tfoot, #ieftcjmxsi tr, #ieftcjmxsi td, #ieftcjmxsi th {
+  border-style: none;
+}
+
+#ieftcjmxsi p {
+  margin: 0;
+  padding: 0;
+}
+
+#ieftcjmxsi .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ieftcjmxsi .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#ieftcjmxsi .gt_title {
+  color: #333333;
+  font-size: 18px;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ieftcjmxsi .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ieftcjmxsi .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ieftcjmxsi .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ieftcjmxsi .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ieftcjmxsi .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ieftcjmxsi .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ieftcjmxsi .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ieftcjmxsi .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ieftcjmxsi .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ieftcjmxsi .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#ieftcjmxsi .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#ieftcjmxsi .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ieftcjmxsi .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ieftcjmxsi .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ieftcjmxsi .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ieftcjmxsi .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ieftcjmxsi .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#ieftcjmxsi .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#ieftcjmxsi .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#ieftcjmxsi .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ieftcjmxsi .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#ieftcjmxsi .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#ieftcjmxsi .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ieftcjmxsi .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ieftcjmxsi .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#ieftcjmxsi .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ieftcjmxsi .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#ieftcjmxsi .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ieftcjmxsi .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ieftcjmxsi .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ieftcjmxsi .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ieftcjmxsi .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ieftcjmxsi .gt_left {
+  text-align: left;
+}
+
+#ieftcjmxsi .gt_center {
+  text-align: center;
+}
+
+#ieftcjmxsi .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ieftcjmxsi .gt_font_normal {
+  font-weight: normal;
+}
+
+#ieftcjmxsi .gt_font_bold {
+  font-weight: bold;
+}
+
+#ieftcjmxsi .gt_font_italic {
+  font-style: italic;
+}
+
+#ieftcjmxsi .gt_super {
+  font-size: 65%;
+}
+
+#ieftcjmxsi .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#ieftcjmxsi .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#ieftcjmxsi .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#ieftcjmxsi .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#ieftcjmxsi .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#ieftcjmxsi .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#ieftcjmxsi .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#ieftcjmxsi .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#ieftcjmxsi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<th colspan="6" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="font-weight: bold"><strong>Neuroimaging - Overlap with Other Biological Variables</strong></th>
+</tr>
+<tr class="gt_col_headings even">
+<th id="Variable" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Variable</th>
+<th id="Wave-0-(N=743)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 0 (N=743)</th>
+<th id="Wave-1-(N=466)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 1 (N=466)</th>
+<th id="Wave-2-(N=418)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 2 (N=418)</th>
+<th id="Wave-3-(N=828)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 3 (N=828)</th>
+<th id="Overall-(N=1321)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Overall (N=1321)</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Genotyping</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=743)">731 (98.4%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=466)">461 (98.9%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=418)">416 (99.5%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=828)">767 (92.6%)</td>
+<td class="gt_row gt_center" headers="Overall (N=1321)">1250 (94.6%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">DNA Methylation</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=743)">369 (49.7%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=466)">371 (79.6%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=418)">325 (77.8%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 3 (N=828)">0 (0.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=1321)">457 (34.6%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">mRNA Sequencing</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=743)">570 (76.7%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=466)">415 (89.1%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=418)">0 (0.0%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=828)">0 (0.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=1321)">743 (56.2%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Serum EV-miRNA (Jessica)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=743)">0 (0.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=466)">116 (24.9%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=418)">117 (28.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 3 (N=828)">0 (0.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=1321)">0 (0.0%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Serum EV-miRNA (Yanka)</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=743)">58 (7.8%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=466)">126 (27.0%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=418)">105 (25.1%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=828)">123 (14.9%)</td>
+<td class="gt_row gt_center" headers="Overall (N=1321)">0 (0.0%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Serum EV-miRNA (All)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=743)">58 (7.8%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=466)">191 (41.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=418)">171 (40.9%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 3 (N=828)">123 (14.9%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=1321)">198 (15.0%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Whole Genome Sequencing (WGS)</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=743)">734 (98.8%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=466)">466 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=418)">417 (99.8%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=828)">790 (95.4%)</td>
+<td class="gt_row gt_center" headers="Overall (N=1321)">1275 (96.5%)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="methylation" class="level3">
+<h3 class="anchored" data-anchor-id="methylation">Methylation</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="etjiaxqbdr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#etjiaxqbdr table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#etjiaxqbdr thead, #etjiaxqbdr tbody, #etjiaxqbdr tfoot, #etjiaxqbdr tr, #etjiaxqbdr td, #etjiaxqbdr th {
+  border-style: none;
+}
+
+#etjiaxqbdr p {
+  margin: 0;
+  padding: 0;
+}
+
+#etjiaxqbdr .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#etjiaxqbdr .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#etjiaxqbdr .gt_title {
+  color: #333333;
+  font-size: 18px;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#etjiaxqbdr .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#etjiaxqbdr .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#etjiaxqbdr .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#etjiaxqbdr .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#etjiaxqbdr .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#etjiaxqbdr .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#etjiaxqbdr .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#etjiaxqbdr .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#etjiaxqbdr .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#etjiaxqbdr .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#etjiaxqbdr .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#etjiaxqbdr .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#etjiaxqbdr .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#etjiaxqbdr .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#etjiaxqbdr .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#etjiaxqbdr .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#etjiaxqbdr .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#etjiaxqbdr .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#etjiaxqbdr .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#etjiaxqbdr .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#etjiaxqbdr .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#etjiaxqbdr .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#etjiaxqbdr .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#etjiaxqbdr .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#etjiaxqbdr .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#etjiaxqbdr .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#etjiaxqbdr .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#etjiaxqbdr .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#etjiaxqbdr .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#etjiaxqbdr .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#etjiaxqbdr .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#etjiaxqbdr .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#etjiaxqbdr .gt_left {
+  text-align: left;
+}
+
+#etjiaxqbdr .gt_center {
+  text-align: center;
+}
+
+#etjiaxqbdr .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#etjiaxqbdr .gt_font_normal {
+  font-weight: normal;
+}
+
+#etjiaxqbdr .gt_font_bold {
+  font-weight: bold;
+}
+
+#etjiaxqbdr .gt_font_italic {
+  font-style: italic;
+}
+
+#etjiaxqbdr .gt_super {
+  font-size: 65%;
+}
+
+#etjiaxqbdr .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#etjiaxqbdr .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#etjiaxqbdr .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#etjiaxqbdr .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#etjiaxqbdr .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#etjiaxqbdr .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#etjiaxqbdr .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#etjiaxqbdr .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#etjiaxqbdr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<th colspan="5" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="font-weight: bold"><strong>DNA Methylation - Overlap with Other Biological Variables</strong></th>
+</tr>
+<tr class="gt_col_headings even">
+<th id="Variable" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Variable</th>
+<th id="Wave-0-(N=369)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 0 (N=369)</th>
+<th id="Wave-1-(N=371)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 1 (N=371)</th>
+<th id="Wave-2-(N=326)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 2 (N=326)</th>
+<th id="Overall-(N=457)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Overall (N=457)</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Genotyping and Polygenic Scores</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=369)">367 (99.5%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=371)">369 (99.5%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=326)">325 (99.7%)</td>
+<td class="gt_row gt_center" headers="Overall (N=457)">455 (99.6%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Neuroimaging</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=369)">369 (100.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=371)">371 (100.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=326)">325 (99.7%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=457)">457 (100.0%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">mRNA Sequencing</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=369)">347 (94.0%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=371)">339 (91.4%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=326)">0 (0.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=457)">450 (98.5%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Serum EV-miRNA (Jessica)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=369)">0 (0.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=371)">114 (30.7%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=326)">117 (35.9%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=457)">0 (0.0%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Serum EV-miRNA (Yanka)</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=369)">58 (15.7%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=371)">113 (30.5%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=326)">103 (31.6%)</td>
+<td class="gt_row gt_center" headers="Overall (N=457)">0 (0.0%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Serum EV-miRNA (All)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=369)">58 (15.7%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=371)">178 (48.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=326)">169 (51.8%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=457)">183 (40.0%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Whole Genome Sequencing (WGS)</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=369)">369 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=371)">371 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=326)">326 (100.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=457)">457 (100.0%)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="rna-sequencing" class="level3">
+<h3 class="anchored" data-anchor-id="rna-sequencing">RNA sequencing</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="clgnwfkfax" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#clgnwfkfax table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#clgnwfkfax thead, #clgnwfkfax tbody, #clgnwfkfax tfoot, #clgnwfkfax tr, #clgnwfkfax td, #clgnwfkfax th {
+  border-style: none;
+}
+
+#clgnwfkfax p {
+  margin: 0;
+  padding: 0;
+}
+
+#clgnwfkfax .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#clgnwfkfax .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#clgnwfkfax .gt_title {
+  color: #333333;
+  font-size: 18px;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#clgnwfkfax .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#clgnwfkfax .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#clgnwfkfax .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#clgnwfkfax .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#clgnwfkfax .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#clgnwfkfax .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#clgnwfkfax .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#clgnwfkfax .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#clgnwfkfax .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#clgnwfkfax .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#clgnwfkfax .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#clgnwfkfax .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#clgnwfkfax .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#clgnwfkfax .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#clgnwfkfax .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#clgnwfkfax .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#clgnwfkfax .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#clgnwfkfax .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#clgnwfkfax .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#clgnwfkfax .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#clgnwfkfax .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#clgnwfkfax .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#clgnwfkfax .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#clgnwfkfax .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#clgnwfkfax .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#clgnwfkfax .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#clgnwfkfax .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#clgnwfkfax .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#clgnwfkfax .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#clgnwfkfax .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#clgnwfkfax .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#clgnwfkfax .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#clgnwfkfax .gt_left {
+  text-align: left;
+}
+
+#clgnwfkfax .gt_center {
+  text-align: center;
+}
+
+#clgnwfkfax .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#clgnwfkfax .gt_font_normal {
+  font-weight: normal;
+}
+
+#clgnwfkfax .gt_font_bold {
+  font-weight: bold;
+}
+
+#clgnwfkfax .gt_font_italic {
+  font-style: italic;
+}
+
+#clgnwfkfax .gt_super {
+  font-size: 65%;
+}
+
+#clgnwfkfax .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#clgnwfkfax .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#clgnwfkfax .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#clgnwfkfax .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#clgnwfkfax .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#clgnwfkfax .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#clgnwfkfax .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#clgnwfkfax .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#clgnwfkfax div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<th colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="font-weight: bold"><strong>RNA-seq - Overlap with Other Biological Variables</strong></th>
+</tr>
+<tr class="gt_col_headings even">
+<th id="Variable" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Variable</th>
+<th id="Wave-0-(N=586)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 0 (N=586)</th>
+<th id="Wave-1-(N=440)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 1 (N=440)</th>
+<th id="Overall-(N=746)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Overall (N=746)</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Genotyping and Polygenic Scores</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=586)">580 (99.0%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=440)">437 (99.3%)</td>
+<td class="gt_row gt_center" headers="Overall (N=746)">739 (99.1%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Neuroimaging</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=586)">570 (97.3%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=440)">415 (94.3%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=746)">743 (99.6%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">DNA Methylation</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=586)">347 (59.2%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=440)">339 (77.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=746)">450 (60.3%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Serum EV-miRNA (Jessica)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=586)">0 (0.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=440)">110 (25.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=746)">0 (0.0%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Serum EV-miRNA (Yanka)</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=586)">56 (9.6%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=440)">120 (27.3%)</td>
+<td class="gt_row gt_center" headers="Overall (N=746)">0 (0.0%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Serum EV-miRNA (All)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=586)">56 (9.6%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=440)">182 (41.4%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=746)">193 (25.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Whole Genome Sequencing (WGS)</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=586)">584 (99.7%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=440)">440 (100.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=746)">744 (99.7%)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="mirna-jessica" class="level3">
+<h3 class="anchored" data-anchor-id="mirna-jessica">miRNA (Jessica)</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="dmphujrtyi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dmphujrtyi table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#dmphujrtyi thead, #dmphujrtyi tbody, #dmphujrtyi tfoot, #dmphujrtyi tr, #dmphujrtyi td, #dmphujrtyi th {
+  border-style: none;
+}
+
+#dmphujrtyi p {
+  margin: 0;
+  padding: 0;
+}
+
+#dmphujrtyi .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#dmphujrtyi .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#dmphujrtyi .gt_title {
+  color: #333333;
+  font-size: 18px;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#dmphujrtyi .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#dmphujrtyi .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dmphujrtyi .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dmphujrtyi .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dmphujrtyi .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#dmphujrtyi .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#dmphujrtyi .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#dmphujrtyi .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#dmphujrtyi .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#dmphujrtyi .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#dmphujrtyi .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#dmphujrtyi .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#dmphujrtyi .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#dmphujrtyi .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#dmphujrtyi .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#dmphujrtyi .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dmphujrtyi .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#dmphujrtyi .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#dmphujrtyi .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#dmphujrtyi .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dmphujrtyi .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#dmphujrtyi .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#dmphujrtyi .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dmphujrtyi .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dmphujrtyi .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#dmphujrtyi .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dmphujrtyi .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#dmphujrtyi .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dmphujrtyi .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dmphujrtyi .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dmphujrtyi .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dmphujrtyi .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dmphujrtyi .gt_left {
+  text-align: left;
+}
+
+#dmphujrtyi .gt_center {
+  text-align: center;
+}
+
+#dmphujrtyi .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#dmphujrtyi .gt_font_normal {
+  font-weight: normal;
+}
+
+#dmphujrtyi .gt_font_bold {
+  font-weight: bold;
+}
+
+#dmphujrtyi .gt_font_italic {
+  font-style: italic;
+}
+
+#dmphujrtyi .gt_super {
+  font-size: 65%;
+}
+
+#dmphujrtyi .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#dmphujrtyi .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#dmphujrtyi .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#dmphujrtyi .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#dmphujrtyi .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#dmphujrtyi .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#dmphujrtyi .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#dmphujrtyi .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#dmphujrtyi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<th colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="font-weight: bold"><strong>miRNA (Jessica) - Overlap with Other Biological Variables</strong></th>
+</tr>
+<tr class="gt_col_headings even">
+<th id="Variable" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Variable</th>
+<th id="Wave-1-(N=120)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 1 (N=120)</th>
+<th id="Wave-2-(N=120)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 2 (N=120)</th>
+<th id="Overall-(N=120)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Overall (N=120)</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Genotyping and Polygenic Scores</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=120)">120 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=120)">120 (100.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=120)">120 (100.0%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Neuroimaging</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=120)">116 (96.7%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=120)">117 (97.5%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=120)">120 (100.0%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">DNA Methylation</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=120)">114 (95.0%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=120)">117 (97.5%)</td>
+<td class="gt_row gt_center" headers="Overall (N=120)">118 (98.3%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">mRNA Sequencing</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=120)">110 (91.7%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=120)">0 (0.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=120)">117 (97.5%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Serum EV-miRNA (Yanka)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=120)">54 (45.0%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=120)">54 (45.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=120)">0 (0.0%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Serum EV-miRNA (All)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=120)">120 (100.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=120)">120 (100.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=120)">120 (100.0%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Whole Genome Sequencing (WGS)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=120)">120 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=120)">120 (100.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=120)">120 (100.0%)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="mirna-yanka" class="level3">
+<h3 class="anchored" data-anchor-id="mirna-yanka">miRNA (Yanka)</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="cjgkytvvdg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cjgkytvvdg table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#cjgkytvvdg thead, #cjgkytvvdg tbody, #cjgkytvvdg tfoot, #cjgkytvvdg tr, #cjgkytvvdg td, #cjgkytvvdg th {
+  border-style: none;
+}
+
+#cjgkytvvdg p {
+  margin: 0;
+  padding: 0;
+}
+
+#cjgkytvvdg .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#cjgkytvvdg .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#cjgkytvvdg .gt_title {
+  color: #333333;
+  font-size: 18px;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#cjgkytvvdg .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#cjgkytvvdg .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#cjgkytvvdg .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cjgkytvvdg .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#cjgkytvvdg .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#cjgkytvvdg .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#cjgkytvvdg .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#cjgkytvvdg .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#cjgkytvvdg .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#cjgkytvvdg .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#cjgkytvvdg .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#cjgkytvvdg .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#cjgkytvvdg .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#cjgkytvvdg .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#cjgkytvvdg .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#cjgkytvvdg .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cjgkytvvdg .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#cjgkytvvdg .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#cjgkytvvdg .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#cjgkytvvdg .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cjgkytvvdg .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#cjgkytvvdg .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#cjgkytvvdg .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cjgkytvvdg .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cjgkytvvdg .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#cjgkytvvdg .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cjgkytvvdg .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#cjgkytvvdg .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cjgkytvvdg .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#cjgkytvvdg .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cjgkytvvdg .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#cjgkytvvdg .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cjgkytvvdg .gt_left {
+  text-align: left;
+}
+
+#cjgkytvvdg .gt_center {
+  text-align: center;
+}
+
+#cjgkytvvdg .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#cjgkytvvdg .gt_font_normal {
+  font-weight: normal;
+}
+
+#cjgkytvvdg .gt_font_bold {
+  font-weight: bold;
+}
+
+#cjgkytvvdg .gt_font_italic {
+  font-style: italic;
+}
+
+#cjgkytvvdg .gt_super {
+  font-size: 65%;
+}
+
+#cjgkytvvdg .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#cjgkytvvdg .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#cjgkytvvdg .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#cjgkytvvdg .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#cjgkytvvdg .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#cjgkytvvdg .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#cjgkytvvdg .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#cjgkytvvdg .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#cjgkytvvdg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<th colspan="6" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="font-weight: bold"><strong>miRNA (Yanka) - Overlap with Other Biological Variables</strong></th>
+</tr>
+<tr class="gt_col_headings even">
+<th id="Variable" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Variable</th>
+<th id="Wave-0-(N=58)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 0 (N=58)</th>
+<th id="Wave-1-(N=132)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 1 (N=132)</th>
+<th id="Wave-2-(N=132)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 2 (N=132)</th>
+<th id="Wave-3-(N=132)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 3 (N=132)</th>
+<th id="Overall-(N=132)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Overall (N=132)</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Genotyping and Polygenic Scores</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=58)">58 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=132)">132 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=132)">132 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=132)">132 (100.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=132)">132 (100.0%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Neuroimaging</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=58)">58 (100.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=132)">126 (95.5%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=132)">105 (79.5%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 3 (N=132)">123 (93.2%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=132)">132 (100.0%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">DNA Methylation</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=58)">58 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=132)">113 (85.6%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=132)">103 (78.0%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=132)">0 (0.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=132)">117 (88.6%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">mRNA Sequencing</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=58)">56 (96.6%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=132)">120 (90.9%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=132)">0 (0.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 3 (N=132)">0 (0.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=132)">128 (97.0%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Serum EV-miRNA (Jessica)</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=58)">0 (0.0%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=132)">54 (40.9%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=132)">54 (40.9%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=132)">0 (0.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=132)">0 (0.0%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Serum EV-miRNA (All)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=58)">58 (100.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=132)">132 (100.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=132)">132 (100.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 3 (N=132)">132 (100.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=132)">132 (100.0%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Whole Genome Sequencing (WGS)</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=58)">58 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=132)">132 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=132)">132 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=132)">132 (100.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=132)">132 (100.0%)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="mirna-combined" class="level3">
+<h3 class="anchored" data-anchor-id="mirna-combined">miRNA (combined)</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="cdtdgulngz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cdtdgulngz table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#cdtdgulngz thead, #cdtdgulngz tbody, #cdtdgulngz tfoot, #cdtdgulngz tr, #cdtdgulngz td, #cdtdgulngz th {
+  border-style: none;
+}
+
+#cdtdgulngz p {
+  margin: 0;
+  padding: 0;
+}
+
+#cdtdgulngz .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#cdtdgulngz .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#cdtdgulngz .gt_title {
+  color: #333333;
+  font-size: 18px;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#cdtdgulngz .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#cdtdgulngz .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#cdtdgulngz .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cdtdgulngz .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#cdtdgulngz .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#cdtdgulngz .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#cdtdgulngz .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#cdtdgulngz .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#cdtdgulngz .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#cdtdgulngz .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#cdtdgulngz .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#cdtdgulngz .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#cdtdgulngz .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#cdtdgulngz .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#cdtdgulngz .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#cdtdgulngz .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cdtdgulngz .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#cdtdgulngz .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#cdtdgulngz .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#cdtdgulngz .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cdtdgulngz .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#cdtdgulngz .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#cdtdgulngz .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cdtdgulngz .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cdtdgulngz .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#cdtdgulngz .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cdtdgulngz .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#cdtdgulngz .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cdtdgulngz .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#cdtdgulngz .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cdtdgulngz .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#cdtdgulngz .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cdtdgulngz .gt_left {
+  text-align: left;
+}
+
+#cdtdgulngz .gt_center {
+  text-align: center;
+}
+
+#cdtdgulngz .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#cdtdgulngz .gt_font_normal {
+  font-weight: normal;
+}
+
+#cdtdgulngz .gt_font_bold {
+  font-weight: bold;
+}
+
+#cdtdgulngz .gt_font_italic {
+  font-style: italic;
+}
+
+#cdtdgulngz .gt_super {
+  font-size: 65%;
+}
+
+#cdtdgulngz .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#cdtdgulngz .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#cdtdgulngz .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#cdtdgulngz .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#cdtdgulngz .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#cdtdgulngz .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#cdtdgulngz .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#cdtdgulngz .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#cdtdgulngz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<th colspan="6" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="font-weight: bold"><strong>miRNA (All) - Overlap with Other Biological Variables</strong></th>
+</tr>
+<tr class="gt_col_headings even">
+<th id="Variable" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Variable</th>
+<th id="Wave-0-(N=58)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 0 (N=58)</th>
+<th id="Wave-1-(N=198)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 1 (N=198)</th>
+<th id="Wave-2-(N=198)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 2 (N=198)</th>
+<th id="Wave-3-(N=132)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 3 (N=132)</th>
+<th id="Overall-(N=198)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Overall (N=198)</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Genotyping and Polygenic Scores</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=58)">58 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=198)">198 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=198)">198 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=132)">132 (100.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=198)">198 (100.0%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Neuroimaging</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=58)">58 (100.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=198)">191 (96.5%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=198)">171 (86.4%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 3 (N=132)">123 (93.2%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=198)">198 (100.0%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">DNA Methylation</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=58)">58 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=198)">178 (89.9%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=198)">169 (85.4%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=132)">0 (0.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=198)">183 (92.4%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">mRNA Sequencing</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=58)">56 (96.6%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=198)">182 (91.9%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=198)">0 (0.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 3 (N=132)">0 (0.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=198)">193 (97.5%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Serum EV-miRNA (Jessica)</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=58)">0 (0.0%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=198)">120 (60.6%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=198)">120 (60.6%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=132)">0 (0.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=198)">0 (0.0%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Serum EV-miRNA (Yanka)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=58)">58 (100.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=198)">132 (66.7%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=198)">132 (66.7%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 3 (N=132)">132 (100.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=198)">0 (0.0%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Whole Genome Sequencing (WGS)</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=58)">58 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=198)">198 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=198)">198 (100.0%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=132)">132 (100.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=198)">198 (100.0%)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="whole-genome-sequencing-wgs" class="level3">
+<h3 class="anchored" data-anchor-id="whole-genome-sequencing-wgs">Whole-genome sequencing (WGS)</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="blwmxcnxfr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#blwmxcnxfr table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#blwmxcnxfr thead, #blwmxcnxfr tbody, #blwmxcnxfr tfoot, #blwmxcnxfr tr, #blwmxcnxfr td, #blwmxcnxfr th {
+  border-style: none;
+}
+
+#blwmxcnxfr p {
+  margin: 0;
+  padding: 0;
+}
+
+#blwmxcnxfr .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#blwmxcnxfr .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#blwmxcnxfr .gt_title {
+  color: #333333;
+  font-size: 18px;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#blwmxcnxfr .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#blwmxcnxfr .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#blwmxcnxfr .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#blwmxcnxfr .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#blwmxcnxfr .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#blwmxcnxfr .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#blwmxcnxfr .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#blwmxcnxfr .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#blwmxcnxfr .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#blwmxcnxfr .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#blwmxcnxfr .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#blwmxcnxfr .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#blwmxcnxfr .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#blwmxcnxfr .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#blwmxcnxfr .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#blwmxcnxfr .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#blwmxcnxfr .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#blwmxcnxfr .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#blwmxcnxfr .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#blwmxcnxfr .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#blwmxcnxfr .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#blwmxcnxfr .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#blwmxcnxfr .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#blwmxcnxfr .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#blwmxcnxfr .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#blwmxcnxfr .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#blwmxcnxfr .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#blwmxcnxfr .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#blwmxcnxfr .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#blwmxcnxfr .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#blwmxcnxfr .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#blwmxcnxfr .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#blwmxcnxfr .gt_left {
+  text-align: left;
+}
+
+#blwmxcnxfr .gt_center {
+  text-align: center;
+}
+
+#blwmxcnxfr .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#blwmxcnxfr .gt_font_normal {
+  font-weight: normal;
+}
+
+#blwmxcnxfr .gt_font_bold {
+  font-weight: bold;
+}
+
+#blwmxcnxfr .gt_font_italic {
+  font-style: italic;
+}
+
+#blwmxcnxfr .gt_super {
+  font-size: 65%;
+}
+
+#blwmxcnxfr .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#blwmxcnxfr .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#blwmxcnxfr .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#blwmxcnxfr .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#blwmxcnxfr .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#blwmxcnxfr .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#blwmxcnxfr .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#blwmxcnxfr .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#blwmxcnxfr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<th colspan="6" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="font-weight: bold"><strong>WGS - Overlap with Other Biological Variables</strong></th>
+</tr>
+<tr class="gt_col_headings even">
+<th id="Variable" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Variable</th>
+<th id="Wave-0-(N=2279)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 0 (N=2279)</th>
+<th id="Wave-1-(N=2279)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 1 (N=2279)</th>
+<th id="Wave-2-(N=2279)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 2 (N=2279)</th>
+<th id="Wave-3-(N=2279)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Wave 3 (N=2279)</th>
+<th id="Overall-(N=2279)" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Overall (N=2279)</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Genotyping and Polygenic Scores</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=2279)">2196 (96.4%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=2279)">2196 (96.4%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=2279)">2196 (96.4%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=2279)">2196 (96.4%)</td>
+<td class="gt_row gt_center" headers="Overall (N=2279)">2196 (96.4%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Neuroimaging</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=2279)">734 (32.2%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=2279)">466 (20.4%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=2279)">417 (18.3%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 3 (N=2279)">790 (34.7%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=2279)">1275 (55.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">DNA Methylation</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=2279)">369 (16.2%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=2279)">371 (16.3%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=2279)">326 (14.3%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=2279)">0 (0.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=2279)">457 (20.1%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">mRNA Sequencing</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=2279)">584 (25.6%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=2279)">440 (19.3%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=2279)">0 (0.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 3 (N=2279)">0 (0.0%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=2279)">744 (32.6%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Serum EV-miRNA (Jessica)</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=2279)">0 (0.0%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=2279)">120 (5.3%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=2279)">120 (5.3%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=2279)">0 (0.0%)</td>
+<td class="gt_row gt_center" headers="Overall (N=2279)">0 (0.0%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="Variable">Serum EV-miRNA (Yanka)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 0 (N=2279)">58 (2.5%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 1 (N=2279)">132 (5.8%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 2 (N=2279)">132 (5.8%)</td>
+<td class="gt_row gt_center gt_striped" headers="Wave 3 (N=2279)">132 (5.8%)</td>
+<td class="gt_row gt_center gt_striped" headers="Overall (N=2279)">0 (0.0%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Serum EV-miRNA (All)</td>
+<td class="gt_row gt_center" headers="Wave 0 (N=2279)">58 (2.5%)</td>
+<td class="gt_row gt_center" headers="Wave 1 (N=2279)">198 (8.7%)</td>
+<td class="gt_row gt_center" headers="Wave 2 (N=2279)">198 (8.7%)</td>
+<td class="gt_row gt_center" headers="Wave 3 (N=2279)">132 (5.8%)</td>
+<td class="gt_row gt_center" headers="Overall (N=2279)">198 (8.7%)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./02r02_neuroimaging.html" class="pagination-link" aria-label="BHRC neuroimaging data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">BHRC neuroimaging data</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>BHRC Research Data Guide</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

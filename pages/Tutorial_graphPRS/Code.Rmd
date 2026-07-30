@@ -1,0 +1,89 @@
+---
+title: "Gráficos de PRS"
+author: "Lucas Toshio Ito"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::readthedown:
+  highlight: pygments
+---
+
+[**Página com arquivo do script em RMarkdown**](https://github.com/Lcstoshio/Lcstoshio.github.io/blob/main/Tutorial_graphPRS/Code.Rmd)
+
+# **Modelo Gráfico da distribuição do Escore Poligênico de Risco (PRS)**
+
+Com os dados exportados do PRSice, no arquivo "Nome_do_arquivo.best" conseguimos os valores do Escore Poligênico de Risco (PRS) para cada uma das amostras/ indivíduos no melhor p-threshold (Colunas: FamilyID, IndividualID, In_Regression, ScorePRS).  
+
+Para criação dos gráficos procurei alguns sites úteis com exemplos de density plots (pacote: ggplot2) e como personalizá-los:  
+
+**Density Plot no ggplot2:**  
+[Cookbook-r](http://www.cookbook-r.com/Graphs/Plotting_distributions_(ggplot2)/)   
+[STHDA](http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization)  
+
+**Customizações (Cores e Detalhes):**  
+[RColorBrewer](https://www.r-graph-gallery.com/38-rcolorbrewers-palettes.html)  
+[Customizing Graphs](https://rkabacoff.github.io/datavis/Customizing.html)  
+
+**Arquivos necessários (toy data):**
+
+- [**test.best:**](https://lcstoshio.github.io/Tutorial_graphPRS/test.best) exportado pelo PRSice (output.best) e contém os escores de risco para cada indivíduo no melhor p-threshold  
+- [**test.summary:**](https://lcstoshio.github.io/Tutorial_graphPRS/test.summary) exportado pelo PRSice (output.summary) e contém qual p-threshold foi utilizado, o número de SNPs, valor de p e R^2 do modelo, ...  
+- [**test_pheno:**](https://lcstoshio.github.io/Tutorial_graphPRS/test_pheno) arquivo de fenótipos que foi utilizado no PRSice no comando --pheno  
+
+```{r message=FALSE, warning=FALSE}
+# Pacotes utilizados
+library (ggplot2) #graficos
+library (plyr) #join_all, ddply
+library (dplyr) #mutate
+```
+
+## **Importando e Manipulando Bancos de Dados**
+
+Primeiro é necessário importar o arquivo exportado do PRSice "Nome_do_arquivo.best" e um outro arquivo que possui as informações de fenótipo e IDs dos indivíduos (mesmo arquivo que foi utilizado no PRSice para --pheno).  
+
+Para fenótipos qualitativos (ex.: caso/controle) é melhor utilizar gráficos de densidade, em casos de fenótipos quantitativos (ex.: altura) seria melhor utilizar um gráficos de dispersão (scatterplot).  
+
+Depois é necessário realizar algumas alterações nesses arquivos, para que possamos por fim juntá-los num único data.frame que será utilizado na plotagem dos gráficos no ggplot2.
+
+```{r}
+# Ler o arquivo .best
+prs <- read.table ("./test.best", header=T)
+# Quando for analisar mais de um fenótipo é importante mudarmos o nome das colunas do escore para diferenciá-los
+colnames(prs) <- c("FID", "IID", "ln_Regression", "a_PRS") 
+
+# Importando arquivo do fenótipo
+phenotype <- read.table ("./test_pheno", header = T)
+colnames(phenotype) <- c("FID2", "IID", "pheno") # é bom mudar o nome da coluna FID pq da problema depois ter 2 colunas com mesmo nome
+# Em casos de dados qualitativos é melhor alterar a nomenclatura do fenótipo (0 e 1 para controle/ caso)
+phenotype <- mutate(phenotype, pheno=factor(pheno, labels=c('Controle', 'Caso')))
+
+# Juntando o arquivo do escore e o arquivo do fenótipo (necessário que possuam uma coluna em comum "IID")
+final <- join_all(list(prs, phenotype),by = "IID", type="inner") # inner = faz com que pegue IIDs que ambos arquivos possuem em comum
+```
+
+## **Gráficos (ggplot2)**
+
+E por fim, utilizando o ggplot2 iremos criar os gráficos de densidade. Além disso, utilizei uma outra função extra que nos da a média do escore do PRS de cada grupo (Controle e Caso).
+
+```{r}
+# Cálculo da média dos escores que será traçada na curva de distribuição
+mean <- ddply(final, "pheno", summarise, grp.mean=mean(a_PRS))
+mean
+
+# Contagem dos casos e controle
+table(final$pheno)
+
+# Também gosto de ter o .summary que mostra o threshold utilizado, mas é opcional
+summary <- read.table ("./test.summary", header =T)
+summary
+
+ggplot(final, aes(x=a_PRS, group=pheno, fill=pheno))+ # a_PRS = escores; pheno = grupos
+     geom_density(alpha=0.5)+ # alpha = densidade da cor
+     geom_vline(data=mean, aes(xintercept=grp.mean, colour=pheno), linetype="dashed", size=0.8)+ # linha da média
+     scale_fill_brewer(palette="Set1") + # Cor dos gráficos
+     scale_color_brewer(palette="Set1") + # Cor das linhas da média
+     theme_classic()+ # um dos temas para gráficos
+     theme(plot.title = element_text(color="black", size=14, face="bold.italic"), legend.position = "right")+ # Fonte do título e posição da legenda
+     ggtitle ("Curva de Distribuição de PRS")+ # Título
+     labs(x="Polygenic Risk Score", y="Density")+ # Nome do eixo x e y
+     xlim(0.5,3) # Limites do eixo x
+```
