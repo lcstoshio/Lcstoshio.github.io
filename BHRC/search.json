@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "BHRC Research Data Guide",
     "section": "",
-    "text": "About this guide\nThe Brazilian High-Risk Cohort for Mental Health Conditions (BHRC) is a longitudinal, multimodal study integrating phenotypic, genomic, molecular, and neuroimaging data across development.\nThis public guide documents cohort-level data availability, summarizes sample characteristics, describes key processing resources, and supports transparent research planning. It is intended for BHRC researchers, collaborators, and investigators considering work with the cohort.",
+    "text": "About this guide\nThe Brazilian High-Risk Cohort for Mental Health Conditions (BHRC) is a longitudinal, multimodal study integrating phenotypic, genomic, molecular, and neuroimaging data across development.\nThe cohort is described in the original study paper, High risk cohort study for psychiatric disorders in childhood: rationale, design, methods and preliminary results, and in the updated Cohort Profile: Brazilian High-Risk Cohort for Mental Health Conditions (BHRC).\nThis public guide documents cohort-level data availability, summarizes sample characteristics, describes key processing resources, and supports transparent research planning. It is intended for BHRC researchers, collaborators, and investigators considering work with the cohort.",
     "crumbs": [
       "About this guide"
     ]
@@ -15,16 +15,6 @@
     "title": "BHRC Research Data Guide",
     "section": "Explore the guide",
     "text": "Explore the guide\n\n\nCohort summaries\nReview demographic and psychiatric-phenotype summaries across biological data modalities and assessment waves.\n\n\nData documentation\nConsult researcher-oriented documentation for polygenic-score and neuroimaging resources.\n\n\nCross-modality overlap\nExplore aggregate sample overlap across genotyping, neuroimaging, methylation, RNA, miRNA, and whole-genome sequencing.",
-    "crumbs": [
-      "About this guide"
-    ]
-  },
-  {
-    "objectID": "index.html#living-documentation",
-    "href": "index.html#living-documentation",
-    "title": "BHRC Research Data Guide",
-    "section": "Living documentation",
-    "text": "Living documentation\nThe guide will evolve as the cohort grows, datasets are curated, and research resources are updated. Dates shown on individual pages indicate when their content was last reviewed.",
     "crumbs": [
       "About this guide"
     ]
