@@ -3,6 +3,9 @@
 Personal academic website and practical resources for research, data analysis,
 and reproducible science.
 
+I use this space to share the tools and guides I wish I had when learning
+reproducible research.
+
 - [Academic website](https://lcstoshio.github.io/)
 - [BHRC Research Data Guide](https://lcstoshio.github.io/BHRC/)
 - [Practical Quarto tutorial](https://lcstoshio.github.io/Tutorial_Quarto/)
