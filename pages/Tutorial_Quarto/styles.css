@@ -1,0 +1,22 @@
+body {
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+}
+
+code {
+  font-size: 0.92em;
+}
+
+.callout {
+  border-radius: 0.5rem;
+}
+
+table {
+  width: 100%;
+}

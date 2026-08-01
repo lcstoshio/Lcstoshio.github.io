@@ -33,7 +33,7 @@ jobs:
         run: |
           mkdir -p _site
           cp -R pages/main-site/. _site/
-          for page in BHRC Tutorial_RMarkdown Tutorial_ggplot2; do
+          for page in BHRC Tutorial_Quarto Tutorial_ggplot2; do
             cp -R "pages/${page}" "_site/${page}"
           done
 

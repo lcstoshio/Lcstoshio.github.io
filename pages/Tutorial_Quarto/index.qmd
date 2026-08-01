@@ -1,0 +1,443 @@
+---
+title: "A Practical Introduction to Quarto"
+subtitle: "Create reproducible documents with text, code, tables, and figures"
+author:
+  - name: Lucas Toshio Ito
+    orcid: 0000-0001-9713-8687
+    email: lucas.toshio@unifesp.br
+    affiliations:
+      - name: Federal University of São Paulo (UNIFESP)
+date: last-modified
+toc: true
+toc-location: left
+toc-title: Contents
+number-sections: true
+highlight-style: github
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    code-fold: false
+    code-tools: true
+    embed-resources: true
+    df-print: paged
+css: styles.css
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+[View the source of this tutorial](https://github.com/lcstoshio/Lcstoshio.github.io/blob/main/pages/Tutorial_Quarto/index.qmd)
+
+# What is Quarto?
+
+[Quarto](https://quarto.org/) is an open-source publishing system for creating reproducible documents, presentations, websites, and books. A Quarto file combines:
+
+- Markdown text;
+- executable code in R, Python, Julia, or Observable;
+- results such as figures and tables;
+- document settings in a YAML header.
+
+Quarto files use the `.qmd` extension. This tutorial creates an HTML document with R, but the same ideas apply to other languages and output formats.
+
+::: {.callout-tip}
+## The basic workflow
+
+Write in a `.qmd` file, render it, inspect the output, and repeat. The source remains readable and records how every result was produced.
+:::
+
+# Install the tools
+
+Install:
+
+1. [Quarto](https://quarto.org/docs/get-started/);
+2. [R](https://cran.r-project.org/);
+3. [RStudio](https://posit.co/download/rstudio-desktop/) or another editor with Quarto support.
+
+Confirm that Quarto is available from a terminal:
+
+```{bash}
+#| eval: false
+
+quarto --version
+```
+
+In RStudio, choose **File > New File > Quarto Document**. From a terminal, you can also create an empty file named `index.qmd`.
+
+# Your first document
+
+A minimal Quarto document contains a YAML header followed by Markdown content:
+
+````markdown
+---
+title: "My first Quarto document"
+author: "Your name"
+format: html
+---
+
+# Introduction
+
+This is a reproducible document.
+
+```{r}
+summary(mtcars$mpg)
+```
+````
+
+Save the file and render it with the **Render** button in RStudio or with:
+
+```{bash}
+#| eval: false
+
+quarto render index.qmd
+```
+
+The command creates `index.html` in the same directory unless another output location is configured.
+
+# The YAML header
+
+YAML controls document-level settings. It begins and ends with `---`.
+
+```yaml
+---
+title: "Analysis report"
+subtitle: "A reproducible example"
+author: "Your name"
+date: today
+toc: true
+number-sections: true
+format:
+  html:
+    theme: cosmo
+    code-fold: true
+execute:
+  warning: false
+  message: false
+---
+```
+
+Indentation matters in YAML. Use spaces, keep nested settings aligned, and do not use tabs.
+
+Useful options include:
+
+| Option | Purpose |
+|---|---|
+| `toc: true` | Add a table of contents |
+| `number-sections: true` | Number headings |
+| `code-fold: true` | Let readers show or hide code |
+| `embed-resources: true` | Produce a self-contained HTML file |
+| `execute: echo: false` | Run code without displaying it |
+
+# Write with Markdown
+
+Markdown provides lightweight formatting.
+
+```markdown
+# Level-one heading
+## Level-two heading
+
+**Bold text** and *italic text*
+
+- unordered item
+- another item
+
+1. first step
+2. second step
+
+[Quarto documentation](https://quarto.org/docs/guide/)
+
+`inline code`
+```
+
+## Callouts
+
+Callouts highlight information without custom HTML.
+
+```markdown
+::: {.callout-warning}
+## Check your data
+
+Never overwrite the raw data during cleaning.
+:::
+```
+
+::: {.callout-warning}
+## Check your data
+
+Never overwrite the raw data during cleaning.
+:::
+
+## Tabsets
+
+Add `.panel-tabset` to a heading when readers should switch between related views.
+
+````markdown
+## Results {.panel-tabset}
+
+### Summary
+
+Summary text goes here.
+
+### Code
+
+```{r}
+summary(mtcars)
+```
+````
+
+# Add executable R code
+
+An R code cell starts with ```` ```{r} ```` and ends with ```` ``` ````. In RStudio, insert one with **Ctrl+Alt+I** on Windows or **Cmd+Option+I** on macOS.
+
+```{r}
+# A cell can create objects and print results.
+mean_mpg <- mean(mtcars$mpg)
+mean_mpg
+```
+
+Objects created in one cell are available to later cells during the same render.
+
+## Cell options
+
+Cell options begin with `#|` and control that specific cell.
+
+```{r}
+#| label: mpg-summary
+#| echo: true
+#| output: true
+
+summary(mtcars$mpg)
+```
+
+Frequently used options:
+
+| Cell option | Effect |
+|---|---|
+| `#| echo: false` | Hide the source code |
+| `#| output: false` | Hide printed output |
+| `#| include: false` | Hide both code and output |
+| `#| eval: false` | Display code without running it |
+| `#| warning: false` | Hide warnings |
+| `#| fig-width: 7` | Set figure width in inches |
+
+## Inline R code
+
+Use inline code for values that should update automatically. For example, this document calculates the mean fuel economy as `r round(mean_mpg, 1)` miles per gallon.
+
+The source is:
+
+```markdown
+The mean is `r round(mean_mpg, 1)` miles per gallon.
+```
+
+# Tables
+
+Any printed data frame appears as a table. For a compact publication-style table, use `knitr::kable()`.
+
+```{r}
+#| label: tbl-cars
+#| tbl-cap: "Average fuel economy and horsepower by cylinder count"
+
+car_summary <- mtcars |>
+  transform(cyl = factor(cyl)) |>
+  aggregate(cbind(mpg, hp) ~ cyl, data = _, FUN = mean)
+
+knitr::kable(
+  car_summary,
+  digits = 1,
+  col.names = c("Cylinders", "Mean MPG", "Mean horsepower")
+)
+```
+
+Refer to the result as @tbl-cars. A cell label beginning with `tbl-` and a `tbl-cap` option create a numbered, cross-referenceable table.
+
+# Figures
+
+R graphics are inserted at the location of the code cell.
+
+```{r}
+#| label: fig-mpg-weight
+#| fig-cap: "Heavier cars generally have lower fuel economy."
+#| fig-alt: "Scatterplot of car weight against fuel economy with a downward fitted line."
+#| fig-width: 7
+#| fig-height: 5
+
+plot(
+  mtcars$wt,
+  mtcars$mpg,
+  pch = 19,
+  col = "#2878B5",
+  xlab = "Weight (1,000 lb)",
+  ylab = "Fuel economy (mpg)"
+)
+abline(lm(mpg ~ wt, data = mtcars), col = "#C82423", lwd = 2)
+```
+
+As shown in @fig-mpg-weight, labels beginning with `fig-` can be referenced anywhere in the document.
+
+# Citations and references
+
+Add a bibliography file to the YAML header:
+
+```yaml
+bibliography: references.bib
+```
+
+Then cite an entry by its key:
+
+```markdown
+Quarto supports citations in many output formats [@citation-key].
+```
+
+Quarto automatically creates the reference list. Citation managers such as Zotero can export `.bib` files.
+
+# Projects and file organization
+
+For a single report, a small structure is enough:
+
+```text
+my-report/
+├── index.qmd
+├── data/
+│   └── observations.csv
+├── figures/
+└── references.bib
+```
+
+For a website or book, create a Quarto project with `_quarto.yml`:
+
+```yaml
+project:
+  type: website
+
+website:
+  title: "My project"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: analysis.qmd
+        text: Analysis
+
+format:
+  html:
+    theme: cosmo
+```
+
+Render every file in the project with:
+
+```{bash}
+#| eval: false
+
+quarto render
+```
+
+# Reproducibility practices
+
+::: {.callout-important}
+## A reproducible document should render from a clean session
+
+Do not rely on objects that exist only in your interactive R environment.
+:::
+
+Recommended habits:
+
+1. Keep raw data unchanged in a dedicated folder.
+2. Use relative paths rather than computer-specific absolute paths.
+3. Load every required package in the document.
+4. Set a random seed when an analysis uses randomness.
+5. Record package versions with `renv` when reproducibility matters.
+6. Render from a fresh R session before sharing.
+7. Track source files with Git; avoid committing temporary files.
+
+```{r}
+#| eval: false
+
+set.seed(2026)
+sample(1:100, size = 5)
+```
+
+# Preview, render, and share
+
+Use live preview while writing:
+
+```{bash}
+#| eval: false
+
+quarto preview index.qmd
+```
+
+Create the final output with:
+
+```{bash}
+#| eval: false
+
+quarto render index.qmd
+```
+
+You can share the generated HTML file directly when `embed-resources: true` is enabled. Quarto can also publish projects to GitHub Pages, Quarto Pub, Netlify, or another web host.
+
+# A reusable report template
+
+````markdown
+---
+title: "Project report"
+author: "Your name"
+date: today
+toc: true
+format:
+  html:
+    theme: cosmo
+    code-fold: true
+    embed-resources: true
+execute:
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+set.seed(2026)
+```
+
+# Question
+
+State the research question.
+
+# Data
+
+Describe the source, variables, and exclusions.
+
+# Analysis
+
+Show the reproducible analysis.
+
+# Results
+
+Present the main tables and figures.
+
+# Conclusions
+
+Summarize the answer, limitations, and next steps.
+````
+
+# Exercises
+
+1. Create a new Quarto document and add your name, a table of contents, and numbered sections.
+2. Add a code cell that calculates the mean and standard deviation of `iris$Sepal.Length`.
+3. Create a table summarizing mean sepal length by species.
+4. Create and cross-reference a figure of sepal length versus petal length.
+5. Add a callout explaining one limitation of the analysis.
+6. Render the document from a fresh R session and share the resulting HTML file.
+
+# Next steps
+
+- [Quarto guide](https://quarto.org/docs/guide/)
+- [Quarto gallery](https://quarto.org/docs/gallery/)
+- [Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+- [Computations with R](https://quarto.org/docs/computations/r.html)
+- [Publishing with Quarto](https://quarto.org/docs/publishing/)
