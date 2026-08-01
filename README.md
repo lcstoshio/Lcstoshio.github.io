@@ -1,10 +1,9 @@
 # Lucas Toshio Ito
 
-Personal academic website and practical resources for research, data analysis,
-and reproducible science.
+This repository brings together my academic work, ongoing projects, and
+practical resources developed throughout my research journey.
 
-I use this space to share the tools and guides I wish I had when learning
-reproducible research.
+It is a growing collection of tools, notes, and lessons gathered along the way.
 
 - [Academic website](https://lcstoshio.github.io/)
 - [BHRC Research Data Guide](https://lcstoshio.github.io/BHRC/)
