@@ -1,0 +1,42 @@
+a{text-decoration: none;}
+
+.fa-stack        .fa.fa-circle { color:darkcyan ; }
+
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  font-style: italic;
+  color: black;
+  font-family: Times;
+  font-variant: small-caps;
+}
+
+h1{
+  font-size: 28pt;
+  color: black;
+  font-family: Helvetica;
+  font-variant: small-caps;
+}
+
+h2{
+  font-size: 24pt;
+  color: teal;
+  font-family: Helvetica;
+  font-variant: small-caps;
+}
+
+h3{
+  font-size: 16pt;
+  color: teal;
+  font-family: Helvetica;
+  font-variant: small-caps;
+}
+
+
+
+/*/
+body{
+  font-family: Helvetica;
+  font-size: 12pt;
+}
+/*/
