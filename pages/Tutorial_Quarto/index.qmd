@@ -1,0 +1,273 @@
+---
+title: "A Practical Introduction to Quarto"
+subtitle: "Write reproducible documents with R"
+author:
+  - name: Lucas Toshio Ito
+    orcid: 0000-0001-9713-8687
+    email: lucas.toshio@unifesp.br
+    affiliations:
+      - name: Universidade Federal de São Paulo (UNIFESP)
+date: last-modified
+toc: true
+toc-location: left
+toc-title: Contents
+number-sections: false
+highlight-style: github
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    code-tools: true
+    embed-resources: true
+execute:
+  warning: false
+  message: false
+---
+
+[View the source of this tutorial](https://github.com/lcstoshio/Lcstoshio.github.io/blob/main/pages/Tutorial_Quarto/index.qmd)
+
+# What is Quarto?
+
+[Quarto](https://quarto.org/) is a way to write reproducible reports that keep your explanations, R code, figures, tables, and results together. Quarto files use the `.qmd` extension and can produce HTML, PDF, Word, presentations, websites, and books.
+
+Most of the file is ordinary text. R code only runs when it is placed inside an R code cell.
+
+# Create your first file
+
+Install [Quarto](https://quarto.org/docs/get-started/), R, and RStudio. In RStudio:
+
+1. Select **File > New File > Quarto Document**.
+2. Add a title and your name.
+3. Choose HTML as the output format.
+4. Select **Create**.
+
+RStudio creates a sample document. You can delete the example content below the YAML header and start writing your own report.
+
+::: {.callout-important}
+Do not delete the opening and closing `---` lines. They define the document header.
+:::
+
+# Understand the header
+
+The YAML header controls the title, author, date, output format, and document options.
+
+```yaml
+---
+title: "My Quarto report"       # Document title
+author: "Your name"             # Author name
+date: today                     # Current date
+toc: true                       # Add a table of contents
+format:
+  html:
+    theme: flatly               # HTML appearance
+    embed-resources: true       # Create one self-contained HTML file
+execute:
+  warning: false                # Hide warnings in the final document
+  message: false                # Hide package messages
+---
+```
+
+YAML indentation matters. Use spaces, keep nested options aligned, and do not use tabs.
+
+# Create headings
+
+Add `#` characters at the beginning of a line to create sections. More `#` characters create lower-level headings.
+
+```markdown
+# Main section
+
+## Subsection
+
+### Smaller subsection
+
+#### Fourth-level heading
+
+##### Fifth-level heading
+
+###### Sixth-level heading
+```
+
+Use headings in order. A document normally starts with `#`, then uses `##` and `###` to organize related content.
+
+# Add R code cells
+
+Code cells are the places where you write executable R code. Everything outside a code cell is treated as text.
+
+There are three common ways to insert an R cell:
+
+1. Type ```` ```{r} ```` at the beginning and ```` ``` ```` at the end.
+2. Press **Ctrl+Alt+I** on Windows or **Cmd+Option+I** on macOS.
+3. Use the **Insert** button in the RStudio editor and select **R**.
+
+```{r}
+# Comments inside an R cell begin with #, just as they do in an R script.
+x <- c(2, 4, 6, 8, 10)
+mean(x)
+```
+
+To run code without rendering the entire document:
+
+- place the cursor on a line and press **Ctrl+Enter** on Windows or **Cmd+Enter** on macOS;
+- click the green arrow in the upper-right corner of the code cell;
+- use the **Run** menu in the RStudio editor.
+
+Objects created in one cell are available to later cells during the same session and render.
+
+# Control code and output
+
+Cell options begin with `#|` and apply only to that cell.
+
+```{r}
+#| label: mpg-summary
+#| echo: true
+
+summary(mtcars$mpg)
+```
+
+| Option | Effect |
+|---|---|
+| `#| echo: false` | Run the code but hide it |
+| `#| output: false` | Hide printed output |
+| `#| include: false` | Hide both code and output |
+| `#| eval: false` | Display code without running it |
+| `#| warning: false` | Hide warnings |
+| `#| fig-width: 7` | Set figure width in inches |
+
+Use inline R code when a value should update automatically:
+
+```markdown
+The mean fuel economy is `r round(mean(mtcars$mpg), 1)` miles per gallon.
+```
+
+The rendered result is: the mean fuel economy is `r round(mean(mtcars$mpg), 1)` miles per gallon.
+
+# Format text
+
+Quarto uses Markdown for ordinary writing.
+
+```markdown
+**Bold text**
+
+*Italic text*
+
+`code or an object name`
+
+- an unordered list
+- another item
+
+1. the first step
+2. the second step
+```
+
+The formatting appears as **bold text**, *italic text*, and `inline code` in the rendered document.
+
+# Add links and images
+
+Add a link with descriptive text followed by the URL:
+
+```markdown
+[RStudio and Posit cheat sheets](https://posit.co/resources/cheatsheets/)
+```
+
+Add an image with similar syntax, but place `!` at the beginning:
+
+```markdown
+![Alternative text](image.jpg)
+```
+
+The image can be a local file or a web URL. Local images should be stored inside the project and referenced with a relative path.
+
+![](https://w0.peakpx.com/wallpaper/236/769/HD-wallpaper-moon-cat-pretty-wonderful-stunning-adorable-clouds-sweet-nice-art-kitty-black-sky-abstract-cat-cute-fire-awesome-moonlight-cats-beautiful-animal-draw-moon-light-blue-animals.jpg){fig-alt="An illustrated black cat sitting under a bright moon in a blue night sky." width="65%" fig-align="center"}
+
+# Add tables and figures from R
+
+Use `knitr::kable()` for a simple table:
+
+```{r}
+#| label: tbl-cars
+#| tbl-cap: "Average fuel economy by cylinder count"
+
+car_summary <- aggregate(mpg ~ cyl, data = mtcars, FUN = mean)
+knitr::kable(
+  car_summary,
+  digits = 1,
+  col.names = c("Cylinders", "Mean MPG")
+)
+```
+
+R graphics are inserted at the position of the code cell:
+
+```{r}
+#| label: fig-mpg-weight
+#| fig-cap: "Heavier cars generally have lower fuel economy."
+#| fig-alt: "Scatterplot of car weight and fuel economy with a downward fitted line."
+
+plot(
+  mtcars$wt,
+  mtcars$mpg,
+  pch = 19,
+  col = "#2878B5",
+  xlab = "Weight (1,000 lb)",
+  ylab = "Fuel economy (mpg)"
+)
+abline(lm(mpg ~ wt, data = mtcars), col = "#C82423", lwd = 2)
+```
+
+Labels beginning with `tbl-` or `fig-` can be referenced in the text. For example, @tbl-cars summarizes the cars and @fig-mpg-weight displays the relationship between weight and fuel economy.
+
+# Add references and footnotes
+
+Create a footnote with `[^1]` in the text and define it elsewhere in the document:
+
+```markdown
+Quarto supports footnotes.[^1]
+
+[^1]: This is the footnote text.
+```
+
+For academic citations, add a BibTeX file to the header:
+
+```yaml
+bibliography: references.bib
+```
+
+Then cite an entry with `[@citation-key]`. Quarto creates the reference list automatically.
+
+# Render the document
+
+Click **Render** at the top of the RStudio editor. Quarto runs the code from top to bottom and creates the requested output.
+
+You can also render from a terminal:
+
+```{bash}
+#| eval: false
+
+quarto render index.qmd
+```
+
+Change the YAML to select another format:
+
+```yaml
+format: html
+```
+
+```yaml
+format: docx
+```
+
+```yaml
+format: pdf
+```
+
+PDF output requires a TeX installation. HTML is usually the easiest format for a first document.
+
+Before sharing, restart R and render again. This confirms that the document loads every package, creates every object, and does not depend on items left in the interactive environment.
+
+# Useful links
+
+- [Quarto guide](https://quarto.org/docs/guide/)
+- [Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+- [Computations with R](https://quarto.org/docs/computations/r.html)
+- [Posit cheat sheets](https://posit.co/resources/cheatsheets/)
+- [Publishing with Quarto](https://quarto.org/docs/publishing/)

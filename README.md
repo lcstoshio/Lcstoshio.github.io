@@ -1,15 +1,11 @@
-# Lcstoshio.github.io
+# Lucas Toshio Ito
 
-Personal academic website and public research resources.
+This repository brings together my academic work, ongoing projects, and
+practical resources developed throughout my research journey.
 
-- Website: <https://lcstoshio.github.io/>
-- BHRC Research Data Guide: <https://lcstoshio.github.io/BHRC/>
+It is a growing collection of tools, notes, and lessons gathered along the way.
 
-Each larger page has its own source folder under [`pages/`](pages/):
-
-- [`main-site/`](pages/main-site/) is the homepage and academic website.
-- [`BHRC/`](pages/BHRC/) is the BHRC Research Data Guide.
-- Each tutorial and standalone project has its own sibling folder.
-
-GitHub Actions combines these folders only when deploying GitHub Pages. This
-keeps the repository root clean without changing any public URLs.
+- [Academic website](https://lcstoshio.github.io/)
+- [BHRC Research Data Guide](https://lcstoshio.github.io/BHRC/)
+- [Practical Quarto tutorial](https://lcstoshio.github.io/Tutorial_Quarto/)
+- [Data visualization with ggplot2](https://lcstoshio.github.io/Tutorial_ggplot2/)
