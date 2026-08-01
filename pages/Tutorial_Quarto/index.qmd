@@ -20,7 +20,6 @@ format:
       dark: darkly
     code-tools: true
     embed-resources: true
-css: styles.css
 execute:
   warning: false
   message: false
@@ -32,7 +31,7 @@ execute:
 
 [Quarto](https://quarto.org/) combines Markdown text, executable code, figures, and tables in one reproducible document. Quarto files use the `.qmd` extension and can produce HTML, PDF, Word, presentations, websites, and books.
 
-![A familiar companion from the original R Markdown tutorial.](https://w0.peakpx.com/wallpaper/236/769/HD-wallpaper-moon-cat-pretty-wonderful-stunning-adorable-clouds-sweet-nice-art-kitty-black-sky-abstract-cat-cute-fire-awesome-moonlight-cats-beautiful-animal-draw-moon-light-blue-animals.jpg){fig-alt="An illustrated black cat sitting under a bright moon in a blue night sky." width="65%" fig-align="center"}
+![](https://w0.peakpx.com/wallpaper/236/769/HD-wallpaper-moon-cat-pretty-wonderful-stunning-adorable-clouds-sweet-nice-art-kitty-black-sky-abstract-cat-cute-fire-awesome-moonlight-cats-beautiful-animal-draw-moon-light-blue-animals.jpg){fig-alt="An illustrated black cat sitting under a bright moon in a blue night sky." width="65%" fig-align="center"}
 
 # Create a document
 
