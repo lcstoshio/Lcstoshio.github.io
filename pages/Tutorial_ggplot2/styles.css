@@ -1,42 +1,27 @@
-a{text-decoration: none;}
-
-.fa-stack        .fa.fa-circle { color:darkcyan ; }
-
-.title {
-  font-size: 50px;
-  font-weight: bold;
-  font-style: italic;
-  color: black;
-  font-family: Times;
-  font-variant: small-caps;
+body {
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
-h1{
-  font-size: 28pt;
-  color: black;
-  font-family: Helvetica;
-  font-variant: small-caps;
+h1,
+h2,
+h3 {
+  letter-spacing: -0.015em;
 }
 
-h2{
-  font-size: 24pt;
-  color: teal;
-  font-family: Helvetica;
-  font-variant: small-caps;
+.quarto-title-block {
+  border-bottom: 1px solid rgba(127, 127, 127, 0.25);
+  margin-bottom: 2rem;
 }
 
-h3{
-  font-size: 16pt;
-  color: teal;
-  font-family: Helvetica;
-  font-variant: small-caps;
+figure {
+  margin-block: 2rem;
 }
 
-
-
-/*/
-body{
-  font-family: Helvetica;
-  font-size: 12pt;
+table {
+  width: 100%;
 }
-/*/
+
+.callout {
+  border-radius: 0.45rem;
+}

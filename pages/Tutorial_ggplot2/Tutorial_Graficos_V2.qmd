@@ -6,7 +6,7 @@ author:
     orcid: 0000-0001-9713-8687
     email: lucas.toshio@unifesp.br
     affiliations:
-      - name: Federal University of São Paulo (UNIFESP)
+      - name: Universidade Federal de São Paulo (UNIFESP)
 date: last-modified
 toc: true
 toc-location: left
@@ -54,6 +54,8 @@ knitr::opts_chunk$set(
 
 Data visualization makes patterns, unusual observations, and relationships easier to identify than they are in a table alone. The **ggplot2** package implements the *Grammar of Graphics*: a plot is assembled from data, aesthetic mappings, geometric objects, scales, and a theme.
 
+![Illustration by Allison Horst.](./ggplot2_cute.jpg){fig-alt="A colorful illustration of ggplot2 as a collection of visual layers used to build a data masterpiece." width="85%" fig-align="center"}
+
 This tutorial covers:
 
 - bar and pie charts;
@@ -88,6 +90,8 @@ R includes many named [colors](http://www.stat.columbia.edu/~tzheng/files/Rcolor
 display.brewer.all()
 ```
 
+![RColorBrewer palette examples.](https://r-graph-gallery.com/38-rcolorbrewers-palettes_files/figure-html/thecode-1.png){fig-alt="A grid of sequential, qualitative, and diverging RColorBrewer palettes." width="72%" fig-align="center"}
+
 For more options, see the [R color palette collection](https://emilhvitfeldt.github.io/r-color-palettes/discrete.html), including palettes designed with color-vision accessibility in mind.
 
 # Example dataset
@@ -101,7 +105,11 @@ outbreak <- readxl::read_excel("surto.xlsx", sheet = "Plan1") |>
   transmute(
     case = factor(caso, labels = c("No", "Yes")),
     sex = factor(sexo, labels = c("Female", "Male")),
-    occupation = factor(ocupa),
+    occupation = factor(
+      ocupa,
+      levels = c("enfermeiro", "estudante", "medico", "professor", "tecnico"),
+      labels = c("Nurse", "Student", "Physician", "Professor", "Technician")
+    ),
     severity = factor(
       gravidade,
       ordered = TRUE,
@@ -115,6 +123,10 @@ outbreak <- readxl::read_excel("surto.xlsx", sheet = "Plan1") |>
 
 dplyr::glimpse(outbreak)
 ```
+
+# Choosing a chart
+
+![Common chart choices by variable type.](./graph_types_en.png){fig-alt="Guide matching categorical and numeric variable combinations to bar charts, histograms, boxplots, density plots, scatterplots, and correlation matrices." width="100%" fig-align="center"}
 
 # Bar charts
 
