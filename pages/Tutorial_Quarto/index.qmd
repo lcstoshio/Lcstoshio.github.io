@@ -25,7 +25,7 @@ execute:
   message: false
 ---
 
-[View the source of this tutorial](https://github.com/lcstoshio/Lcstoshio.github.io/blob/main/pages/Tutorial_Quarto/index.qmd)
+[View the source of this tutorial](https://github.com/lucastoshioito/lucastoshioito.github.io/blob/main/pages/Tutorial_Quarto/index.qmd)
 
 # What is Quarto?
 

@@ -15,7 +15,7 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE, out.width = "100%",
 
 # **Manipulando banco de dados**
 
-[**PÃ¡gina com arquivo do script em RMarkdown**](https://github.com/Lcstoshio/Lcstoshio.github.io/blob/main/Covid_WorldData/Code.Rmd)
+[**PÃ¡gina com arquivo do script em RMarkdown**](https://github.com/lucastoshioito/lucastoshioito.github.io/blob/main/Covid_WorldData/Code.Rmd)
 
 [**Post com script original**](https://towardsdatascience.com/track-covid-19-data-yourself-with-r-eb3e641cd4b3)
 

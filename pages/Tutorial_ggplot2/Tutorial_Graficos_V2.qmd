@@ -28,7 +28,7 @@ execute:
   message: false
 ---
 
-[View the Quarto source](https://github.com/lcstoshio/Lcstoshio.github.io/blob/main/pages/Tutorial_ggplot2/Tutorial_Graficos_V2.qmd)
+[View the Quarto source](https://github.com/lucastoshioito/lucastoshioito.github.io/blob/main/pages/Tutorial_ggplot2/Tutorial_Graficos_V2.qmd)
 
 ```{r}
 #| label: setup

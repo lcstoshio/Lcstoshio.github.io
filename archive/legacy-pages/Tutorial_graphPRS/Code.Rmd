@@ -7,27 +7,27 @@ output:
   highlight: pygments
 ---
 
-[**Página com arquivo do script em RMarkdown**](https://github.com/Lcstoshio/Lcstoshio.github.io/blob/main/Tutorial_graphPRS/Code.Rmd)
+[**Página com arquivo do script em RMarkdown**](https://github.com/lucastoshioito/lucastoshioito.github.io/blob/main/Tutorial_graphPRS/Code.Rmd)
 
 # **Modelo Gráfico da distribuição do Escore Poligênico de Risco (PRS)**
 
-Com os dados exportados do PRSice, no arquivo "Nome_do_arquivo.best" conseguimos os valores do Escore Poligênico de Risco (PRS) para cada uma das amostras/ indivíduos no melhor p-threshold (Colunas: FamilyID, IndividualID, In_Regression, ScorePRS).  
+Com os dados exportados do PRSice, no arquivo "Nome_do_arquivo.best" conseguimos os valores do Escore Poligênico de Risco (PRS) para cada uma das amostras/ indivíduos no melhor p-threshold (Colunas: FamilyID, IndividualID, In_Regression, ScorePRS).
 
-Para criação dos gráficos procurei alguns sites úteis com exemplos de density plots (pacote: ggplot2) e como personalizá-los:  
+Para criação dos gráficos procurei alguns sites úteis com exemplos de density plots (pacote: ggplot2) e como personalizá-los:
 
-**Density Plot no ggplot2:**  
-[Cookbook-r](http://www.cookbook-r.com/Graphs/Plotting_distributions_(ggplot2)/)   
-[STHDA](http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization)  
+**Density Plot no ggplot2:**
+[Cookbook-r](http://www.cookbook-r.com/Graphs/Plotting_distributions_(ggplot2)/)
+[STHDA](http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization)
 
-**Customizações (Cores e Detalhes):**  
-[RColorBrewer](https://www.r-graph-gallery.com/38-rcolorbrewers-palettes.html)  
-[Customizing Graphs](https://rkabacoff.github.io/datavis/Customizing.html)  
+**Customizações (Cores e Detalhes):**
+[RColorBrewer](https://www.r-graph-gallery.com/38-rcolorbrewers-palettes.html)
+[Customizing Graphs](https://rkabacoff.github.io/datavis/Customizing.html)
 
 **Arquivos necessários (toy data):**
 
-- [**test.best:**](https://lcstoshio.github.io/Tutorial_graphPRS/test.best) exportado pelo PRSice (output.best) e contém os escores de risco para cada indivíduo no melhor p-threshold  
-- [**test.summary:**](https://lcstoshio.github.io/Tutorial_graphPRS/test.summary) exportado pelo PRSice (output.summary) e contém qual p-threshold foi utilizado, o número de SNPs, valor de p e R^2 do modelo, ...  
-- [**test_pheno:**](https://lcstoshio.github.io/Tutorial_graphPRS/test_pheno) arquivo de fenótipos que foi utilizado no PRSice no comando --pheno  
+- [**test.best:**](https://lucastoshioito.github.io/Tutorial_graphPRS/test.best) exportado pelo PRSice (output.best) e contém os escores de risco para cada indivíduo no melhor p-threshold
+- [**test.summary:**](https://lucastoshioito.github.io/Tutorial_graphPRS/test.summary) exportado pelo PRSice (output.summary) e contém qual p-threshold foi utilizado, o número de SNPs, valor de p e R^2 do modelo, ...
+- [**test_pheno:**](https://lucastoshioito.github.io/Tutorial_graphPRS/test_pheno) arquivo de fenótipos que foi utilizado no PRSice no comando --pheno
 
 ```{r message=FALSE, warning=FALSE}
 # Pacotes utilizados
@@ -38,9 +38,9 @@ library (dplyr) #mutate
 
 ## **Importando e Manipulando Bancos de Dados**
 
-Primeiro é necessário importar o arquivo exportado do PRSice "Nome_do_arquivo.best" e um outro arquivo que possui as informações de fenótipo e IDs dos indivíduos (mesmo arquivo que foi utilizado no PRSice para --pheno).  
+Primeiro é necessário importar o arquivo exportado do PRSice "Nome_do_arquivo.best" e um outro arquivo que possui as informações de fenótipo e IDs dos indivíduos (mesmo arquivo que foi utilizado no PRSice para --pheno).
 
-Para fenótipos qualitativos (ex.: caso/controle) é melhor utilizar gráficos de densidade, em casos de fenótipos quantitativos (ex.: altura) seria melhor utilizar um gráficos de dispersão (scatterplot).  
+Para fenótipos qualitativos (ex.: caso/controle) é melhor utilizar gráficos de densidade, em casos de fenótipos quantitativos (ex.: altura) seria melhor utilizar um gráficos de dispersão (scatterplot).
 
 Depois é necessário realizar algumas alterações nesses arquivos, para que possamos por fim juntá-los num único data.frame que será utilizado na plotagem dos gráficos no ggplot2.
 
@@ -48,7 +48,7 @@ Depois é necessário realizar algumas alterações nesses arquivos, para que po
 # Ler o arquivo .best
 prs <- read.table ("./test.best", header=T)
 # Quando for analisar mais de um fenótipo é importante mudarmos o nome das colunas do escore para diferenciá-los
-colnames(prs) <- c("FID", "IID", "ln_Regression", "a_PRS") 
+colnames(prs) <- c("FID", "IID", "ln_Regression", "a_PRS")
 
 # Importando arquivo do fenótipo
 phenotype <- read.table ("./test_pheno", header = T)

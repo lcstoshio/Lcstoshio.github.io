@@ -7,7 +7,7 @@ output:
   highlight: pygments
 ---
 
-[**Página com arquivo do script em RMarkdown**](https://github.com/Lcstoshio/Lcstoshio.github.io/blob/main/Tutorial_Graphs/Code.Rmd)
+[**Página com arquivo do script em RMarkdown**](https://github.com/lucastoshioito/lucastoshioito.github.io/blob/main/Tutorial_Graphs/Code.Rmd)
 
 ```{r set options, include=FALSE}
 options(width = 700)
