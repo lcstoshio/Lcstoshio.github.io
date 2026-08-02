@@ -7,7 +7,7 @@ output:
   highlight: pygments
 ---
 
-[**Página com arquivo do script em RMarkdown**](https://github.com/Lcstoshio/Lcstoshio.github.io/blob/main/Tutorial_RMarkdown/Code.Rmd)
+[**Página com arquivo do script em RMarkdown**](https://github.com/lucastoshioito/lucastoshioito.github.io/blob/main/Tutorial_RMarkdown/Code.Rmd)
 
 **R Markdown é uma maneira de escrever/gerar relatórios usando o R, e incluir todos os passos das análises, como anotações, código utilizado, gráficos, tabelas e qualquer tipo de resultado.**
 
