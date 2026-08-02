@@ -9,3 +9,4 @@ It is a growing collection of tools, notes, and lessons gathered along the way.
 - [BHRC Research Data Guide](https://lucastoshioito.github.io/BHRC/)
 - [Practical Quarto tutorial](https://lucastoshioito.github.io/tutorial_quarto/)
 - [Graphics with ggplot2](https://lucastoshioito.github.io/tutorial_ggplot2/)
+- [PRS-CS and PRS-CSx guide](https://lucastoshioito.github.io/tutorial_PRSCS_PRSCSx/)
