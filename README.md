@@ -7,5 +7,5 @@ It is a growing collection of tools, notes, and lessons gathered along the way.
 
 - [Academic website](https://lucastoshioito.github.io/)
 - [BHRC Research Data Guide](https://lucastoshioito.github.io/BHRC/)
-- [Practical Quarto tutorial](https://lucastoshioito.github.io/Tutorial_Quarto/)
+- [Practical Quarto tutorial](https://lucastoshioito.github.io/tutorial_quarto/)
 - [Data visualization with ggplot2](https://lucastoshioito.github.io/Tutorial_ggplot2/)
