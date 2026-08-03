@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://lucastoshioito.github.io
+Sitemap: https://lucastoshioito.github.io/sitemap.xml
