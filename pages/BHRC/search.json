@@ -83,11 +83,22 @@
     ]
   },
   {
+    "objectID": "01t01_genotyping.html#lifetime-psychiatric-diagnoses",
+    "href": "01t01_genotyping.html#lifetime-psychiatric-diagnoses",
+    "title": "1  Genotyping and polygenic scores",
+    "section": "1.4 Lifetime Psychiatric Diagnoses",
+    "text": "1.4 Lifetime Psychiatric Diagnoses\nOnly lifetime and age-18+ summaries are shown because genotyping data are not time-dependent.\n\n\n\n\n\n\nExclusions\n\n\n\nPre-18-only cases are excluded from adult controls. Participants without an age-18+ evaluation fall outside the adult denominator.\n\n\n\n\n\n\n\n\n\n\nPsychiatric Diagnosis Timing Among Probands with Genotyping Data (BHRC)\n\n\nCell format: cases / controls / excluded lifetime cases\n\n\nPsychiatric Phenotype\nLifetime (N=2240)\nDiagnosed at 18+ (N=1968)\n\n\n\n\nADHD\n388 / 1,852 / 0\n99 / 1,613 / 255\n\n\nAnxiety Disorders\n653 / 1,587 / 0\n432 / 1,336 / 200\n\n\nBipolar Disorder or Mania\n34 / 2,206 / 0\n24 / 1,934 / 9\n\n\nEating Disorders\n84 / 2,156 / 0\n54 / 1,884 / 29\n\n\nMajor Depressive Disorder\n533 / 1,707 / 0\n359 / 1,461 / 147\n\n\nOCD\n56 / 2,184 / 0\n26 / 1,913 / 28\n\n\nPsychosis\n6 / 2,234 / 0\n3 / 1,961 / 3\n\n\nPTSD\n157 / 2,083 / 0\n112 / 1,813 / 43\n\n\nAny Psychiatric Disorder\n1,294 / 946 / 0\n797 / 769 / 402\n\n\n\nCells show cases / controls / excluded cases. Controls were assessed and never positive. Pre-18-only cases are excluded from adult controls; 272 participants lacked an age-18+ evaluation. Missing phenotype assessments are skipped.",
+    "crumbs": [
+      "Cohort summaries",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Genotyping and polygenic scores</span>"
+    ]
+  },
+  {
     "objectID": "01t02_neuroimaging.html",
     "href": "01t02_neuroimaging.html",
     "title": "2  Neuroimaging sample",
     "section": "",
-    "text": "2.1 Demographic Characteristics\nAuthor: Lucas Toshio Ito\nlucas.toshio.ito@gmail.com\nUniversidade Federal de São Paulo (UNIFESP)\nLast updated: March 16, 2026\nCounts represent raw availability before modality-specific quality control. Cumulative cases are participants who met the phenotype definition at any observed timepoint; missing assessments are skipped.\nPsychiatric Disorders (DAWBA):\nSuicidality variables (C-SSRS):\nDemographic Characteristics of the Study Sample\n\n\nVariable\nWave0\nN = 7431\nWave1\nN = 4661\nWave2\nN = 4181\nWave3\nN = 8281\nOverall\nN = 1,3212\n\n\n\n\nSex at birth\n\n\n\n\n\n\n\n\n\n\n\n\n    Male\n422 (56.8%)\n270 (57.9%)\n234 (56.0%)\n422 (51.0%)\n710 (53.7%)\n\n\n    Female\n321 (43.2%)\n196 (42.1%)\n184 (44.0%)\n406 (49.0%)\n611 (46.3%)\n\n\nAge\n\n\n\n\n\n\n\n\n\n\n\n\n    Mean (SD)\n10.7 (1.9)\n14.4 (1.9)\n17.9 (1.9)\n24.0 (2.0)\n23.3 (2.6)\n\n\n    Median (Q1-Q3)\n10.6 (9.2-11.9)\n14.2 (12.9-15.7)\n17.8 (16.4-19.4)\n23.9 (22.4-25.3)\n23.5 (21.9-25.1)\n\n\nState\n\n\n\n\n\n\n\n\n\n\n\n\n    RS\n366 (49.3%)\n213 (45.7%)\n193 (46.2%)\n408 (49.3%)\n655 (49.6%)\n\n\n    SP\n377 (50.7%)\n253 (54.3%)\n225 (53.8%)\n420 (50.7%)\n666 (50.4%)\n\n\nSelection\n\n\n\n\n\n\n\n\n\n\n\n\n    Random\n342 (46.0%)\n210 (45.1%)\n193 (46.2%)\n316 (38.2%)\n534 (40.4%)\n\n\n    High Risk\n401 (54.0%)\n256 (54.9%)\n225 (53.8%)\n512 (61.8%)\n787 (59.6%)\n\n\nSkin color\n\n\n\n\n\n\n\n\n\n\n\n\n    White\n411 (55.3%)\n249 (53.4%)\n234 (56.0%)\n441 (53.3%)\n727 (55.0%)\n\n\n    Black\n92 (12.4%)\n72 (15.5%)\n45 (10.8%)\n109 (13.2%)\n178 (13.5%)\n\n\n    Between white and black (brown)\n235 (31.6%)\n142 (30.5%)\n136 (32.5%)\n273 (33.0%)\n409 (31.0%)\n\n\n    Indigenous\n2 (0.3%)\n1 (0.2%)\n1 (0.2%)\n2 (0.2%)\n3 (0.2%)\n\n\n    Asian\n3 (0.4%)\n2 (0.4%)\n2 (0.5%)\n3 (0.4%)\n4 (0.3%)\n\n\n\n1 n (%)\n\n\n2 Overall N includes participants with neuroimaging data at any timepoint and reflects data from their most recent assessment.",
+    "text": "2.1 Demographic Characteristics\nAuthor: Lucas Toshio Ito\nlucas.toshio.ito@gmail.com\nUniversidade Federal de São Paulo (UNIFESP)\nLast updated: August 10, 2026\nCounts represent raw availability before modality-specific quality control. Cumulative cases are participants who met the phenotype definition at any observed timepoint; missing assessments are skipped.\nPsychiatric Disorders (DAWBA):\nSuicidality variables (C-SSRS):\nDemographic Characteristics of the Study Sample\n\n\nVariable\nWave0\nN = 7431\nWave1\nN = 4661\nWave2\nN = 4181\nWave3\nN = 8281\nOverall\nN = 1,3212\n\n\n\n\nSex at birth\n\n\n\n\n\n\n\n\n\n\n\n\n    Male\n422 (56.8%)\n270 (57.9%)\n234 (56.0%)\n422 (51.0%)\n710 (53.7%)\n\n\n    Female\n321 (43.2%)\n196 (42.1%)\n184 (44.0%)\n406 (49.0%)\n611 (46.3%)\n\n\nAge\n\n\n\n\n\n\n\n\n\n\n\n\n    Mean (SD)\n10.7 (1.9)\n14.4 (1.9)\n17.9 (1.9)\n24.0 (2.0)\n23.3 (2.6)\n\n\n    Median (Q1-Q3)\n10.6 (9.2-11.9)\n14.2 (12.9-15.7)\n17.8 (16.4-19.4)\n23.9 (22.4-25.3)\n23.5 (21.9-25.1)\n\n\nState\n\n\n\n\n\n\n\n\n\n\n\n\n    RS\n366 (49.3%)\n213 (45.7%)\n193 (46.2%)\n408 (49.3%)\n655 (49.6%)\n\n\n    SP\n377 (50.7%)\n253 (54.3%)\n225 (53.8%)\n420 (50.7%)\n666 (50.4%)\n\n\nSelection\n\n\n\n\n\n\n\n\n\n\n\n\n    Random\n342 (46.0%)\n210 (45.1%)\n193 (46.2%)\n316 (38.2%)\n534 (40.4%)\n\n\n    High Risk\n401 (54.0%)\n256 (54.9%)\n225 (53.8%)\n512 (61.8%)\n787 (59.6%)\n\n\nSkin color\n\n\n\n\n\n\n\n\n\n\n\n\n    White\n411 (55.3%)\n249 (53.4%)\n234 (56.0%)\n441 (53.3%)\n727 (55.0%)\n\n\n    Black\n92 (12.4%)\n72 (15.5%)\n45 (10.8%)\n109 (13.2%)\n178 (13.5%)\n\n\n    Between white and black (brown)\n235 (31.6%)\n142 (30.5%)\n136 (32.5%)\n273 (33.0%)\n409 (31.0%)\n\n\n    Indigenous\n2 (0.3%)\n1 (0.2%)\n1 (0.2%)\n2 (0.2%)\n3 (0.2%)\n\n\n    Asian\n3 (0.4%)\n2 (0.4%)\n2 (0.5%)\n3 (0.4%)\n4 (0.3%)\n\n\n\n1 n (%)\n\n\n2 Overall N includes participants with neuroimaging data at any timepoint and reflects data from their most recent assessment.",
     "crumbs": [
       "Cohort summaries",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Neuroimaging sample</span>"
@@ -110,6 +121,17 @@
     "title": "2  Neuroimaging sample",
     "section": "2.3 Cumulative Psychiatric Phenotypes",
     "text": "2.3 Cumulative Psychiatric Phenotypes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCumulative Psychiatric Phenotypes Prevalence Across Waves Among Probands with Neuroimaging Data (BHRC)\n\n\nPsychiatric Phenotype\nWave 0 (N=743)\nWave 1 (N=466)\nWave 2 (N=418)\nWave 3 (N=828)\nLifetime (N=1321)1\n\n\n\n\nADHD\n90 (12.1%)\n98 (21.0%)\n79 (18.9%)\n152 (18.4%)\n267 (20.2%)\n\n\nAnxiety Disorders\n56 (7.5%)\n96 (20.6%)\n108 (25.8%)\n308 (37.2%)\n457 (34.6%)\n\n\nBipolar Disorder or Mania\n3 (0.4%)\n2 (0.4%)\n1 (0.2%)\n17 (2.1%)\n22 (1.7%)\n\n\nEating Disorders\n5 (0.7%)\n11 (2.4%)\n10 (2.4%)\n41 (5.0%)\n61 (4.6%)\n\n\nMajor Depressive Disorder\n27 (3.6%)\n53 (11.4%)\n97 (23.2%)\n245 (29.6%)\n374 (28.3%)\n\n\nOCD\n2 (0.3%)\n11 (2.4%)\n11 (2.6%)\n24 (2.9%)\n41 (3.1%)\n\n\nPsychosis\n0 (0.0%)\n1 (0.2%)\n3 (0.7%)\n3 (0.4%)\n5 (0.4%)\n\n\nPTSD\n10 (1.3%)\n12 (2.6%)\n14 (3.3%)\n70 (8.5%)\n104 (7.9%)\n\n\nAny Psychiatric Disorder\n226 (30.4%)\n245 (52.6%)\n238 (56.9%)\n538 (65.0%)\n845 (64.0%)\n\n\nSuicidal Ideation2\n0 (0.0%)\n0 (0.0%)\n0 (0.0%)\n350 (42.3%)\n488 (36.9%)\n\n\nSuicide Attempt2\n0 (0.0%)\n0 (0.0%)\n0 (0.0%)\n171 (20.7%)\n248 (18.8%)\n\n\n\n1 Lifetime N represents the phenotype at any assessment among participants with neuroimaging data.\n\n\n2 Suicidality phenotypes were only evaluated in the last follow-up (Wave 3).\n\n\nDiagnoses were assessed using the Development and Well-Being Assessment (DAWBA) following DSM-IV criteria.\nThe table summarizes lifetime psychiatric disorders identified in probands up to each wave.\nPhenotypes are counted from the wave of first identification onward.",
+    "crumbs": [
+      "Cohort summaries",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Neuroimaging sample</span>"
+    ]
+  },
+  {
+    "objectID": "01t02_neuroimaging.html#diagnosis-timing-relative-to-neuroimaging-acquisition",
+    "href": "01t02_neuroimaging.html#diagnosis-timing-relative-to-neuroimaging-acquisition",
+    "title": "2  Neuroimaging sample",
+    "section": "2.4 Diagnosis Timing Relative to Neuroimaging Acquisition",
+    "text": "2.4 Diagnosis Timing Relative to Neuroimaging Acquisition\nA diagnosis is counted by acquisition when identified in the same or an earlier wave. Age-18+ diagnoses use p1dawbaage or sdawbaage.\n\n\n\n\n\n\nExclusions\n\n\n\nPre-18-only cases and diagnoses first observed after acquisition are excluded from controls. Participants without an age-18+ evaluation fall outside the adult denominator.\n\n\n\n\n\n\n\n\n\n\nPsychiatric Diagnosis Timing Among Probands with Neuroimaging Data (BHRC)\n\n\nCell format: cases / controls / excluded lifetime cases\n\n\nPsychiatric Phenotype\nLifetime (N=1321)\nDiagnosed at 18+ (N=1264)\nBy neuroimaging wave (N=1321)\nAt 18+ by neuroimaging wave (N=916)\n\n\n\n\nADHD\n267 / 1,054 / 0\n68 / 1,007 / 189\n244 / 1,054 / 23\n47 / 743 / 126\n\n\nAnxiety Disorders\n457 / 864 / 0\n301 / 812 / 151\n394 / 864 / 63\n227 / 577 / 112\n\n\nBipolar Disorder or Mania\n22 / 1,299 / 0\n17 / 1,243 / 4\n21 / 1,299 / 1\n16 / 899 / 1\n\n\nEating Disorders\n61 / 1,260 / 0\n38 / 1,203 / 23\n54 / 1,260 / 7\n33 / 871 / 12\n\n\nMajor Depressive Disorder\n374 / 947 / 0\n255 / 899 / 110\n311 / 947 / 63\n186 / 638 / 92\n\n\nOCD\n41 / 1,280 / 0\n18 / 1,224 / 22\n35 / 1,280 / 6\n13 / 888 / 15\n\n\nPsychosis\n5 / 1,316 / 0\n3 / 1,259 / 2\n5 / 1,316 / 0\n3 / 911 / 2\n\n\nPTSD\n104 / 1,217 / 0\n70 / 1,162 / 32\n84 / 1,217 / 20\n51 / 842 / 23\n\n\nAny Psychiatric Disorder\n845 / 476 / 0\n546 / 446 / 272\n772 / 476 / 73\n409 / 314 / 193\n\n\n\nControls were evaluated for the phenotype and were never positive at any observed wave. For the age-18+ columns, a case was positive at an evaluation conducted at age 18 or older; diagnoses observed only before 18 were excluded rather than treated as controls. For neuroimaging columns, diagnoses must occur during the same wave or a previous wave. Lifetime cases diagnosed only after the last relevant neuroimaging wave were also excluded from controls. Participants without an eligible age-18+ evaluation are outside the adult denominators: 57 for the diagnosis-at-18+ column and 405 for the age-18+ neuroimaging column. Counts represent raw availability before modality-specific quality control.",
     "crumbs": [
       "Cohort summaries",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Neuroimaging sample</span>"
@@ -149,6 +171,17 @@
     ]
   },
   {
+    "objectID": "01t03_methylation.html#diagnosis-timing-relative-to-methylation-acquisition",
+    "href": "01t03_methylation.html#diagnosis-timing-relative-to-methylation-acquisition",
+    "title": "3  Methylation",
+    "section": "3.4 Diagnosis Timing Relative to Methylation Acquisition",
+    "text": "3.4 Diagnosis Timing Relative to Methylation Acquisition\nA diagnosis is counted by acquisition when identified in the same or an earlier wave. Age-18+ diagnoses use p1dawbaage or sdawbaage.\n\n\n\n\n\n\nExclusions\n\n\n\nPre-18-only cases and diagnoses first observed after acquisition are excluded from controls. Participants without an age-18+ evaluation fall outside the adult denominator.\n\n\n\n\n\n\n\n\n\n\nPsychiatric Diagnosis Timing Among Probands with Methylation Data (BHRC)\n\n\nCell format: cases / controls / excluded lifetime cases\n\n\nPsychiatric Phenotype\nLifetime (N=457)\nDiagnosed at 18+ (N=441)\nBy Methylation wave (N=457)\nAt 18+ by Methylation wave (N=137)\n\n\n\n\nADHD\n97 / 360 / 0\n28 / 346 / 67\n82 / 360 / 15\n9 / 107 / 21\n\n\nAnxiety Disorders\n163 / 294 / 0\n96 / 280 / 65\n116 / 294 / 47\n25 / 78 / 34\n\n\nBipolar Disorder or Mania\n6 / 451 / 0\n4 / 435 / 2\n2 / 451 / 4\n0 / 134 / 3\n\n\nEating Disorders\n20 / 437 / 0\n10 / 421 / 10\n11 / 437 / 9\n1 / 134 / 2\n\n\nMajor Depressive Disorder\n123 / 334 / 0\n75 / 320 / 46\n88 / 334 / 35\n32 / 83 / 22\n\n\nOCD\n13 / 444 / 0\n5 / 428 / 8\n10 / 444 / 3\n1 / 131 / 5\n\n\nPsychosis\n3 / 454 / 0\n2 / 438 / 1\n3 / 454 / 0\n2 / 134 / 1\n\n\nPTSD\n30 / 427 / 0\n17 / 411 / 13\n14 / 427 / 16\n2 / 127 / 8\n\n\nAny Psychiatric Disorder\n301 / 156 / 0\n179 / 147 / 115\n248 / 156 / 53\n52 / 33 / 52\n\n\n\nCells show cases / controls / excluded cases. Controls were assessed and never positive. Pre-18-only cases are excluded from adult controls; 16 participants lacked an age-18+ evaluation. Diagnoses first observed after the relevant Methylation wave are excluded from acquisition-aligned controls.",
+    "crumbs": [
+      "Cohort summaries",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Methylation</span>"
+    ]
+  },
+  {
     "objectID": "01t04_rnaseq.html",
     "href": "01t04_rnaseq.html",
     "title": "4  RNA sequencing",
@@ -176,6 +209,17 @@
     "title": "4  RNA sequencing",
     "section": "4.3 Cumulative Psychiatric Phenotypes",
     "text": "4.3 Cumulative Psychiatric Phenotypes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCumulative Psychiatric Phenotypes Prevalence Across Waves Among Probands with RNA-seq Data (BHRC)\n\n\nPsychiatric Phenotype\nWave 0 (N=586)\nWave 1 (N=440)\nLifetime (N=746)1\n\n\n\n\nADHD\n70 (11.9%)\n91 (20.7%)\n168 (22.5%)\n\n\nAnxiety Disorders\n39 (6.7%)\n86 (19.5%)\n240 (32.2%)\n\n\nBipolar Disorder or Mania\n1 (0.2%)\n2 (0.5%)\n10 (1.3%)\n\n\nEating Disorders\n4 (0.7%)\n11 (2.5%)\n31 (4.2%)\n\n\nMajor Depressive Disorder\n23 (3.9%)\n51 (11.6%)\n199 (26.7%)\n\n\nOCD\n2 (0.3%)\n10 (2.3%)\n26 (3.5%)\n\n\nPsychosis\n0 (0.0%)\n1 (0.2%)\n4 (0.5%)\n\n\nPTSD\n8 (1.4%)\n12 (2.7%)\n56 (7.5%)\n\n\nAny Psychiatric Disorder\n175 (29.9%)\n229 (52.0%)\n477 (63.9%)\n\n\nSuicidal Ideation2\n0 (0.0%)\n0 (0.0%)\n241 (32.3%)\n\n\nSuicide Attempt2\n0 (0.0%)\n0 (0.0%)\n137 (18.4%)\n\n\n\n1 Lifetime N represents the phenotype at any assessment among participants with RNA-seq data.\n\n\n2 Suicidality phenotypes were only evaluated in the last follow-up (Wave 3).\n\n\nDiagnoses were assessed using the Development and Well-Being Assessment (DAWBA) following DSM-IV criteria.\nThe table summarizes lifetime psychiatric disorders identified in probands up to each wave.\nPhenotypes are counted from the wave of first identification onward.",
+    "crumbs": [
+      "Cohort summaries",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>RNA sequencing</span>"
+    ]
+  },
+  {
+    "objectID": "01t04_rnaseq.html#diagnosis-timing-relative-to-rna-seq-acquisition",
+    "href": "01t04_rnaseq.html#diagnosis-timing-relative-to-rna-seq-acquisition",
+    "title": "4  RNA sequencing",
+    "section": "4.4 Diagnosis Timing Relative to RNA-seq Acquisition",
+    "text": "4.4 Diagnosis Timing Relative to RNA-seq Acquisition\nA diagnosis is counted by acquisition when identified in the same or an earlier wave. Age-18+ diagnoses use p1dawbaage or sdawbaage.\n\n\n\n\n\n\nExclusions\n\n\n\nPre-18-only cases and diagnoses first observed after acquisition are excluded from controls. Participants without an age-18+ evaluation fall outside the adult denominator.\n\n\n\n\n\n\n\n\n\n\nPsychiatric Diagnosis Timing Among Probands with RNA-seq Data (BHRC)\n\n\nCell format: cases / controls / excluded lifetime cases\n\n\nPsychiatric Phenotype\nLifetime (N=746)\nDiagnosed at 18+ (N=699)\nBy RNA-seq wave (N=746)\nAt 18+ by RNA-seq wave (N=5)\n\n\n\n\nADHD\n168 / 578 / 0\n45 / 540 / 114\n121 / 578 / 47\n0 / 5 / 0\n\n\nAnxiety Disorders\n240 / 506 / 0\n149 / 463 / 87\n101 / 506 / 139\n0 / 5 / 0\n\n\nBipolar Disorder or Mania\n10 / 736 / 0\n7 / 689 / 3\n2 / 736 / 8\n0 / 5 / 0\n\n\nEating Disorders\n31 / 715 / 0\n17 / 668 / 14\n12 / 715 / 19\n0 / 5 / 0\n\n\nMajor Depressive Disorder\n199 / 547 / 0\n129 / 507 / 63\n64 / 547 / 135\n1 / 4 / 0\n\n\nOCD\n26 / 720 / 0\n11 / 674 / 14\n12 / 720 / 14\n0 / 5 / 0\n\n\nPsychosis\n4 / 742 / 0\n2 / 695 / 2\n1 / 742 / 3\n0 / 5 / 0\n\n\nPTSD\n56 / 690 / 0\n33 / 644 / 22\n15 / 690 / 41\n0 / 5 / 0\n\n\nAny Psychiatric Disorder\n477 / 269 / 0\n286 / 244 / 169\n314 / 269 / 163\n2 / 3 / 0\n\n\n\nCells show cases / controls / excluded cases. Controls were assessed and never positive. Pre-18-only cases are excluded from adult controls; 47 participants lacked an age-18+ evaluation. Diagnoses first observed after the relevant RNA-seq wave are excluded from acquisition-aligned controls.",
     "crumbs": [
       "Cohort summaries",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>RNA sequencing</span>"
@@ -215,6 +259,17 @@
     ]
   },
   {
+    "objectID": "01t05_mirna_jess.html#diagnosis-timing-relative-to-mirna-acquisition",
+    "href": "01t05_mirna_jess.html#diagnosis-timing-relative-to-mirna-acquisition",
+    "title": "5  miRNA: Jessica dataset",
+    "section": "5.4 Diagnosis Timing Relative to miRNA Acquisition",
+    "text": "5.4 Diagnosis Timing Relative to miRNA Acquisition\nA diagnosis is counted by acquisition when identified in the same or an earlier wave. Age-18+ diagnoses use p1dawbaage or sdawbaage.\n\n\n\n\n\n\nExclusions\n\n\n\nPre-18-only cases and diagnoses first observed after acquisition are excluded from controls. Participants without an age-18+ evaluation fall outside the adult denominator.\n\n\n\n\n\n\n\n\n\n\nPsychiatric Diagnosis Timing Among Probands with miRNA (Jessica) Data (BHRC)\n\n\nCell format: cases / controls / excluded lifetime cases\n\n\nPsychiatric Phenotype\nLifetime (N=120)\nDiagnosed at 18+ (N=117)\nBy miRNA (Jessica) wave (N=120)\nAt 18+ by miRNA (Jessica) wave (N=56)\n\n\n\n\nADHD\n46 / 74 / 0\n12 / 72 / 33\n42 / 74 / 4\n6 / 39 / 11\n\n\nAnxiety Disorders\n57 / 63 / 0\n34 / 61 / 22\n50 / 63 / 7\n14 / 27 / 15\n\n\nBipolar Disorder or Mania\n4 / 116 / 0\n3 / 113 / 1\n1 / 116 / 3\n0 / 53 / 3\n\n\nEating Disorders\n4 / 116 / 0\n2 / 113 / 2\n3 / 116 / 1\n1 / 55 / 0\n\n\nMajor Depressive Disorder\n57 / 63 / 0\n35 / 61 / 21\n53 / 63 / 4\n24 / 22 / 10\n\n\nOCD\n8 / 112 / 0\n4 / 109 / 4\n6 / 112 / 2\n1 / 52 / 3\n\n\nPsychosis\n3 / 117 / 0\n2 / 114 / 1\n3 / 117 / 0\n2 / 53 / 1\n\n\nPTSD\n16 / 104 / 0\n7 / 101 / 9\n10 / 104 / 6\n1 / 49 / 6\n\n\nAny Psychiatric Disorder\n102 / 18 / 0\n66 / 17 / 34\n98 / 18 / 4\n34 / 5 / 17\n\n\n\nCells show cases / controls / excluded cases. Controls were assessed and never positive. Pre-18-only cases are excluded from adult controls; 3 participants lacked an age-18+ evaluation. Diagnoses first observed after the relevant miRNA (Jessica) wave are excluded from acquisition-aligned controls.",
+    "crumbs": [
+      "Cohort summaries",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>miRNA: Jessica dataset</span>"
+    ]
+  },
+  {
     "objectID": "01t05_mirna_yanka.html",
     "href": "01t05_mirna_yanka.html",
     "title": "6  miRNA: Yanka dataset",
@@ -242,6 +297,17 @@
     "title": "6  miRNA: Yanka dataset",
     "section": "6.3 Cumulative Psychiatric Phenotypes",
     "text": "6.3 Cumulative Psychiatric Phenotypes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCumulative Psychiatric Phenotypes Prevalence Across Waves Among Probands with miRNA Data (BHRC)\n\n\nPsychiatric Phenotype\nWave 0 (N=58)\nWave 1 (N=132)\nWave 2 (N=132)1\nWave 3 (N=132)\nLifetime (N=132)\n\n\n\n\nADHD\n7 (12.1%)\n30 (22.7%)\n32 (24.2%)\n34 (25.8%)\n34 (25.8%)\n\n\nAnxiety Disorders\n2 (3.4%)\n25 (18.9%)\n37 (28.0%)\n47 (35.6%)\n47 (35.6%)\n\n\nBipolar Disorder or Mania\n0 (0.0%)\n0 (0.0%)\n0 (0.0%)\n3 (2.3%)\n3 (2.3%)\n\n\nEating Disorders\n0 (0.0%)\n1 (0.8%)\n2 (1.5%)\n3 (2.3%)\n3 (2.3%)\n\n\nMajor Depressive Disorder\n0 (0.0%)\n13 (9.8%)\n27 (20.5%)\n35 (26.5%)\n35 (26.5%)\n\n\nOCD\n0 (0.0%)\n1 (0.8%)\n3 (2.3%)\n4 (3.0%)\n4 (3.0%)\n\n\nPsychosis\n0 (0.0%)\n0 (0.0%)\n1 (0.8%)\n1 (0.8%)\n1 (0.8%)\n\n\nPTSD\n1 (1.7%)\n4 (3.0%)\n6 (4.5%)\n11 (8.3%)\n11 (8.3%)\n\n\nAny Psychiatric Disorder\n13 (22.4%)\n65 (49.2%)\n72 (54.5%)\n83 (62.9%)\n83 (62.9%)\n\n\nSuicidal Ideation2\n0 (0.0%)\n0 (0.0%)\n0 (0.0%)\n50 (37.9%)\n50 (37.9%)\n\n\nSuicide Attempt2\n0 (0.0%)\n0 (0.0%)\n0 (0.0%)\n27 (20.5%)\n27 (20.5%)\n\n\n\n1 Lifetime N represents the phenotype at any assessment among participants with miRNA data.\n\n\n2 Suicidality phenotypes were only evaluated in the last follow-up (Wave 3).\n\n\nDiagnoses were assessed using the Development and Well-Being Assessment (DAWBA) following DSM-IV criteria.\nThe table summarizes lifetime psychiatric disorders identified in probands up to each wave.\nPhenotypes are counted from the wave of first identification onward.",
+    "crumbs": [
+      "Cohort summaries",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>miRNA: Yanka dataset</span>"
+    ]
+  },
+  {
+    "objectID": "01t05_mirna_yanka.html#diagnosis-timing-relative-to-mirna-acquisition",
+    "href": "01t05_mirna_yanka.html#diagnosis-timing-relative-to-mirna-acquisition",
+    "title": "6  miRNA: Yanka dataset",
+    "section": "6.4 Diagnosis Timing Relative to miRNA Acquisition",
+    "text": "6.4 Diagnosis Timing Relative to miRNA Acquisition\nA diagnosis is counted by acquisition when identified in the same or an earlier wave. Age-18+ diagnoses use p1dawbaage or sdawbaage.\n\n\n\n\n\n\nExclusions\n\n\n\nPre-18-only cases and diagnoses first observed after acquisition are excluded from controls. Participants without an age-18+ evaluation fall outside the adult denominator.\n\n\n\n\n\n\n\n\n\n\nPsychiatric Diagnosis Timing Among Probands with miRNA (Yanka) Data (BHRC)\n\n\nCell format: cases / controls / excluded lifetime cases\n\n\nPsychiatric Phenotype\nLifetime (N=132)\nDiagnosed at 18+ (N=132)\nBy miRNA (Yanka) wave (N=132)\nAt 18+ by miRNA (Yanka) wave (N=132)\n\n\n\n\nADHD\n34 / 98 / 0\n8 / 98 / 26\n34 / 98 / 0\n8 / 98 / 26\n\n\nAnxiety Disorders\n47 / 85 / 0\n28 / 85 / 19\n47 / 85 / 0\n28 / 85 / 19\n\n\nBipolar Disorder or Mania\n3 / 129 / 0\n3 / 129 / 0\n3 / 129 / 0\n3 / 129 / 0\n\n\nEating Disorders\n3 / 129 / 0\n2 / 129 / 1\n3 / 129 / 0\n2 / 129 / 1\n\n\nMajor Depressive Disorder\n35 / 97 / 0\n23 / 97 / 12\n35 / 97 / 0\n23 / 97 / 12\n\n\nOCD\n4 / 128 / 0\n2 / 128 / 2\n4 / 128 / 0\n2 / 128 / 2\n\n\nPsychosis\n1 / 131 / 0\n1 / 131 / 0\n1 / 131 / 0\n1 / 131 / 0\n\n\nPTSD\n11 / 121 / 0\n5 / 121 / 6\n11 / 121 / 0\n5 / 121 / 6\n\n\nAny Psychiatric Disorder\n83 / 49 / 0\n52 / 49 / 31\n83 / 49 / 0\n52 / 49 / 31\n\n\n\nCells show cases / controls / excluded cases. Controls were assessed and never positive. Pre-18-only cases are excluded from adult controls; 0 participants lacked an age-18+ evaluation. Diagnoses first observed after the relevant miRNA (Yanka) wave are excluded from acquisition-aligned controls.",
     "crumbs": [
       "Cohort summaries",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>miRNA: Yanka dataset</span>"
@@ -281,6 +347,17 @@
     ]
   },
   {
+    "objectID": "01t05_mirna_all.html#diagnosis-timing-relative-to-mirna-acquisition",
+    "href": "01t05_mirna_all.html#diagnosis-timing-relative-to-mirna-acquisition",
+    "title": "7  miRNA: combined sample",
+    "section": "7.4 Diagnosis Timing Relative to miRNA Acquisition",
+    "text": "7.4 Diagnosis Timing Relative to miRNA Acquisition\nA diagnosis is counted by acquisition when identified in the same or an earlier wave. Age-18+ diagnoses use p1dawbaage or sdawbaage.\n\n\n\n\n\n\nExclusions\n\n\n\nPre-18-only cases and diagnoses first observed after acquisition are excluded from controls. Participants without an age-18+ evaluation fall outside the adult denominator.\n\n\n\n\n\n\n\n\n\n\nPsychiatric Diagnosis Timing Among Probands with miRNA Data (BHRC)\n\n\nCell format: cases / controls / excluded lifetime cases\n\n\nPsychiatric Phenotype\nLifetime (N=198)\nDiagnosed at 18+ (N=195)\nBy miRNA wave (N=198)\nAt 18+ by miRNA wave (N=167)\n\n\n\n\nADHD\n57 / 141 / 0\n15 / 139 / 41\n54 / 141 / 3\n12 / 124 / 31\n\n\nAnxiety Disorders\n76 / 122 / 0\n45 / 120 / 30\n74 / 122 / 2\n37 / 103 / 27\n\n\nBipolar Disorder or Mania\n5 / 193 / 0\n4 / 190 / 1\n4 / 193 / 1\n3 / 163 / 1\n\n\nEating Disorders\n5 / 193 / 0\n3 / 190 / 2\n5 / 193 / 0\n3 / 163 / 1\n\n\nMajor Depressive Disorder\n69 / 129 / 0\n43 / 127 / 25\n68 / 129 / 1\n38 / 111 / 18\n\n\nOCD\n9 / 189 / 0\n4 / 186 / 5\n8 / 189 / 1\n2 / 160 / 5\n\n\nPsychosis\n3 / 195 / 0\n2 / 192 / 1\n3 / 195 / 0\n2 / 164 / 1\n\n\nPTSD\n19 / 179 / 0\n9 / 176 / 10\n16 / 179 / 3\n6 / 151 / 10\n\n\nAny Psychiatric Disorder\n140 / 58 / 0\n88 / 57 / 50\n139 / 58 / 1\n76 / 51 / 40\n\n\n\nCells show cases / controls / excluded cases. Controls were assessed and never positive. Pre-18-only cases are excluded from adult controls; 3 participants lacked an age-18+ evaluation. Diagnoses first observed after the relevant miRNA wave are excluded from acquisition-aligned controls.",
+    "crumbs": [
+      "Cohort summaries",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>miRNA: combined sample</span>"
+    ]
+  },
+  {
     "objectID": "01t06_wgs.html",
     "href": "01t06_wgs.html",
     "title": "8  Whole Genome Sequencing (WGS)",
@@ -308,6 +385,17 @@
     "title": "8  Whole Genome Sequencing (WGS)",
     "section": "8.3 Cumulative Psychiatric Phenotypes",
     "text": "8.3 Cumulative Psychiatric Phenotypes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCumulative Psychiatric Phenotypes Prevalence Across Waves Among Probands with WGS Data (BHRC)\n\n\nPsychiatric Phenotype\nWave 0 (N=2279)\nWave 1 (N=2279)\nWave 2 (N=2279)\nWave 3 (N=2279)\nLifetime (N=2279)1\n\n\n\n\nADHD\n258 (11.3%)\n311 (13.6%)\n338 (14.8%)\n393 (17.2%)\n393 (17.2%)\n\n\nAnxiety Disorders\n150 (6.6%)\n283 (12.4%)\n453 (19.9%)\n667 (29.3%)\n667 (29.3%)\n\n\nBipolar Disorder or Mania\n5 (0.2%)\n6 (0.3%)\n13 (0.6%)\n36 (1.6%)\n36 (1.6%)\n\n\nEating Disorders\n10 (0.4%)\n28 (1.2%)\n45 (2.0%)\n85 (3.7%)\n85 (3.7%)\n\n\nMajor Depressive Disorder\n68 (3.0%)\n161 (7.1%)\n384 (16.8%)\n545 (23.9%)\n545 (23.9%)\n\n\nOCD\n7 (0.3%)\n30 (1.3%)\n46 (2.0%)\n57 (2.5%)\n57 (2.5%)\n\n\nPsychosis\n1 (0.0%)\n3 (0.1%)\n6 (0.3%)\n6 (0.3%)\n6 (0.3%)\n\n\nPTSD\n20 (0.9%)\n30 (1.3%)\n77 (3.4%)\n159 (7.0%)\n159 (7.0%)\n\n\nAny Psychiatric Disorder\n607 (26.6%)\n849 (37.3%)\n1066 (46.8%)\n1321 (58.0%)\n1321 (58.0%)\n\n\nSuicidal Ideation2\n0 (0.0%)\n0 (0.0%)\n0 (0.0%)\n704 (30.9%)\n704 (30.9%)\n\n\nSuicide Attempt2\n0 (0.0%)\n0 (0.0%)\n0 (0.0%)\n353 (15.5%)\n353 (15.5%)\n\n\n\n1 Lifetime N represents the phenotype at any assessment among participants with WGS data.\n\n\n2 Suicidality phenotypes were only evaluated in the last follow-up (Wave 3).\n\n\nDiagnoses were assessed using the Development and Well-Being Assessment (DAWBA) following DSM-IV criteria.\nThe table summarizes lifetime psychiatric disorders identified in probands up to each wave.\nPhenotypes are counted from the wave of first identification onward.",
+    "crumbs": [
+      "Cohort summaries",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Whole Genome Sequencing (WGS)</span>"
+    ]
+  },
+  {
+    "objectID": "01t06_wgs.html#lifetime-psychiatric-diagnoses",
+    "href": "01t06_wgs.html#lifetime-psychiatric-diagnoses",
+    "title": "8  Whole Genome Sequencing (WGS)",
+    "section": "8.4 Lifetime Psychiatric Diagnoses",
+    "text": "8.4 Lifetime Psychiatric Diagnoses\nOnly lifetime and age-18+ summaries are shown because WGS data are not time-dependent.\n\n\n\n\n\n\nExclusions\n\n\n\nPre-18-only cases are excluded from adult controls. Participants without an age-18+ evaluation fall outside the adult denominator.\n\n\n\n\n\n\n\n\n\n\nPsychiatric Diagnosis Timing Among Probands with WGS Data (BHRC)\n\n\nCell format: cases / controls / excluded lifetime cases\n\n\nPsychiatric Phenotype\nLifetime (N=2279)\nDiagnosed at 18+ (N=2014)\n\n\n\n\nADHD\n393 / 1,886 / 0\n100 / 1,654 / 259\n\n\nAnxiety Disorders\n667 / 1,612 / 0\n440 / 1,368 / 206\n\n\nBipolar Disorder or Mania\n36 / 2,243 / 0\n26 / 1,978 / 9\n\n\nEating Disorders\n85 / 2,194 / 0\n55 / 1,929 / 29\n\n\nMajor Depressive Disorder\n545 / 1,734 / 0\n365 / 1,496 / 152\n\n\nOCD\n57 / 2,222 / 0\n25 / 1,958 / 30\n\n\nPsychosis\n6 / 2,273 / 0\n3 / 2,007 / 3\n\n\nPTSD\n159 / 2,120 / 0\n114 / 1,857 / 43\n\n\nAny Psychiatric Disorder\n1,321 / 958 / 0\n816 / 788 / 410\n\n\n\nCells show cases / controls / excluded cases. Controls were assessed and never positive. Pre-18-only cases are excluded from adult controls; 265 participants lacked an age-18+ evaluation. Missing phenotype assessments are skipped.",
     "crumbs": [
       "Cohort summaries",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Whole Genome Sequencing (WGS)</span>"
