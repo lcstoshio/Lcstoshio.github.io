@@ -69,6 +69,37 @@ table {
   font-size: 0.92rem;
 }
 
+.publication-table {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.publication-table table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.publication-table th:nth-child(1),
+.publication-table td:nth-child(1) {
+  width: 19%;
+}
+
+.publication-table th:nth-child(2),
+.publication-table td:nth-child(2) {
+  width: 49%;
+}
+
+.publication-table th:nth-child(3),
+.publication-table td:nth-child(3) {
+  width: 32%;
+}
+
+.publication-table th,
+.publication-table td {
+  overflow-wrap: anywhere;
+  vertical-align: top;
+}
+
 .table-responsive,
 .cell-output-display {
   max-width: 100%;
@@ -82,6 +113,10 @@ table {
 }
 
 @media (max-width: 600px) {
+  .publication-table table {
+    min-width: 760px;
+  }
+
   .custom-book-header {
     align-items: flex-start;
     flex-direction: column;
