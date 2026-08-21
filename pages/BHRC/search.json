@@ -14,7 +14,7 @@
     "href": "index.html#explore-the-guide",
     "title": "BHRC Research Data Guide",
     "section": "Explore the guide",
-    "text": "Explore the guide\n\n\nCohort summaries\nReview demographic and psychiatric-phenotype summaries across biological data modalities and assessment waves.\n\n\nData documentation\nConsult researcher-oriented documentation for polygenic-score and neuroimaging resources.\n\n\nCross-modality overlap\nExplore aggregate sample overlap across genotyping, neuroimaging, methylation, RNA, miRNA, and whole-genome sequencing.",
+    "text": "Explore the guide\n\n\nCohort summaries\nReview demographic and psychiatric-phenotype summaries across biological data modalities and assessment waves.\n\n\nData documentation\nConsult researcher-oriented documentation for polygenic score and neuroimaging resources.\n\n\nPublications and resources\nBrowse curated BHRC neuroimaging and polygenic score publications, methods, and supporting resources.\n\n\nCross-modality overlap\nExplore aggregate sample overlap across genotyping, neuroimaging, methylation, RNA, miRNA, and whole-genome sequencing.",
     "crumbs": [
       "About this guide"
     ]
@@ -406,7 +406,7 @@
     "href": "02r_readmes.html",
     "title": "Data documentation",
     "section": "",
-    "text": "Available documentation\nThis section provides researcher-oriented documentation for BHRC polygenic-score (PGS) and neuroimaging resources. The chapters describe available variables, processing decisions, dataset organization, analytic cautions, and appropriate use.\nThese pages are documentation rather than a data-distribution mechanism. Participant-level datasets remain controlled and are not included in this public website.",
+    "text": "Available documentation\nThis section provides researcher-oriented documentation for BHRC polygenic score (PGS) and neuroimaging resources. The chapters describe available variables, processing decisions, dataset organization, analytic cautions, and appropriate use.\nThese pages are documentation rather than a data-distribution mechanism. Participant-level datasets remain controlled and are not included in this public website.",
     "crumbs": [
       "Data documentation"
     ]
@@ -426,7 +426,7 @@
     "href": "02r01_pgs_database.html",
     "title": "9  BHRC Polygenic Score Database v3.0",
     "section": "",
-    "text": "9.1 Overview\nAuthor: Lucas Toshio Ito - UNIFESP\nlucas.toshio.ito@gmail.com\nSupervisor: Marcos Leite Santoro – UNIFESP\nsantorogen@gmail.com\nGenetics Coordinator: Síntia Belangero – UNIFESP\nsinbelangero@gmail.com\nLast updated: March 16, 2026\nThis database stores polygenic scores (PGS or PRS) for several phenotypes in the Brazilian High-Risk Cohort for Mental Health Conditions (BHRC). Out of the 2,511 probands in the study, 2,175 underwent genotyping and passed quality control (QC), so only these individuals can be used for genetic analysis.\nWe calculated the PGS for the participants using PRS-CS v1.1.0 (Ge et al., 2019) and PRS-CSx v1.1.0 (Ruan et al., 2022), based on summary statistics from prior genome-wide association studies (GWAS) for various phenotypes, primarily sourced from the Psychiatric Genomics Consortium (PGC). PRS-CSx was only applied for multi-ancestry GWAS phenotypes with ancestry-specific summary statistics available.\nPRS-CS applies a continuous Bayesian shrinkage parameter to estimate the mean posterior effect size for a GWAS, incorporating an external 1000 Genomes European Linkage Disequilibrium (LD) panel. The global shrinkage parameter for PRS-CS was derived from the data using a fully Bayesian approach, with other parameters set to default. The Plink v1.9 score function was used to calculate individual PGSs, which were then standardized in R to have a mean of 0 and a standard deviation of 1.\nThe PGS value is based solely on the individual’s genetic data and the summary statistics used. Therefore, regardless of the number of individuals analyzed, this value will remain consistent.\nA list of publications that have used BHRC polygenic scores is available in the BHRC PGS Publications folder.\nThe GWAS studies used as sources for calculating the PGS are documented in the GWAS Source Studies folder.",
+    "text": "9.1 Overview\nAuthor: Lucas Toshio Ito - UNIFESP\nlucas.toshio.ito@gmail.com\nSupervisor: Marcos Leite Santoro – UNIFESP\nsantorogen@gmail.com\nGenetics Coordinator: Síntia Belangero – UNIFESP\nsinbelangero@gmail.com\nLast updated: March 16, 2026\nThis database stores polygenic scores (PGS or PRS) for several phenotypes in the Brazilian High-Risk Cohort for Mental Health Conditions (BHRC). Out of the 2,511 probands in the study, 2,175 underwent genotyping and passed quality control (QC), so only these individuals can be used for genetic analysis.\nWe calculated the PGS for the participants using PRS-CS v1.1.0 (Ge et al., 2019) and PRS-CSx v1.1.0 (Ruan et al., 2022), based on summary statistics from prior genome-wide association studies (GWAS) for various phenotypes, primarily sourced from the Psychiatric Genomics Consortium (PGC). PRS-CSx was only applied for multi-ancestry GWAS phenotypes with ancestry-specific summary statistics available.\nPRS-CS applies a continuous Bayesian shrinkage parameter to estimate the mean posterior effect size for a GWAS, incorporating an external 1000 Genomes European Linkage Disequilibrium (LD) panel. The global shrinkage parameter for PRS-CS was derived from the data using a fully Bayesian approach, with other parameters set to default. The Plink v1.9 score function was used to calculate individual PGSs, which were then standardized in R to have a mean of 0 and a standard deviation of 1.\nThe PGS value is based solely on the individual’s genetic data and the summary statistics used. Therefore, regardless of the number of individuals analyzed, this value will remain consistent.\nPublications that have used BHRC polygenic scores are listed on the BHRC polygenic score publications page.",
     "crumbs": [
       "Data documentation",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>BHRC Polygenic Score Database v3.0</span>"
@@ -628,6 +628,125 @@
     "crumbs": [
       "Data documentation",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>BHRC neuroimaging data</span>"
+    ]
+  },
+  {
+    "objectID": "02p_publications.html",
+    "href": "02p_publications.html",
+    "title": "Publications and resources",
+    "section": "",
+    "text": "Available pages\nThis section brings together publications and research resources that use BHRC neuroimaging or polygenic score data. It complements the technical documentation by showing how these data have been used in published research.",
+    "crumbs": [
+      "Publications and resources"
+    ]
+  },
+  {
+    "objectID": "02p_publications.html#available-pages",
+    "href": "02p_publications.html#available-pages",
+    "title": "Publications and resources",
+    "section": "",
+    "text": "BHRC neuroimaging publications: cohort documentation, structural MRI, resting-state fMRI, multicohort studies, shared resources, and preprints.\nBHRC polygenic score publications: a unified list of peer-reviewed PGS applications and links to score documentation.\n\n\n\n\n\n\n\nScope\n\n\n\nThese are curated working inventories, not systematic reviews. Publication status and links should be checked before citing an entry.",
+    "crumbs": [
+      "Publications and resources"
+    ]
+  },
+  {
+    "objectID": "02p01_neuroimaging_publications.html",
+    "href": "02p01_neuroimaging_publications.html",
+    "title": "11  BHRC neuroimaging publications",
+    "section": "",
+    "text": "11.1 Cohort and neuroimaging documentation\nCurated by: Lucas Toshio Ito - UNIFESP\nlucas.toshio.ito@gmail.com\nLiterature reviewed through August 21, 2026\nThis page lists publications verified as using MRI data from the Brazilian High-Risk Cohort for Mental Health Conditions (BHRC).",
+    "crumbs": [
+      "Publications and resources",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>BHRC neuroimaging publications</span>"
+    ]
+  },
+  {
+    "objectID": "02p01_neuroimaging_publications.html#cohort-and-neuroimaging-documentation",
+    "href": "02p01_neuroimaging_publications.html#cohort-and-neuroimaging-documentation",
+    "title": "11  BHRC neuroimaging publications",
+    "section": "",
+    "text": "Authors, year and link\nPublication\nUse of BHRC data\n\n\n\n\nSalum et al. (2015)\nHigh risk cohort study for psychiatric disorders in childhood: rationale, design, methods and preliminary results\nOriginal sampling and baseline multimodal MRI design, including T1, diffusion MRI, resting-state fMRI, and magnetization transfer.\n\n\nSalum et al. (2025)\nCohort Profile: Brazilian High-Risk Cohort for Mental Health Conditions\nUpdated cohort waves, retention, access procedures, and multimodal overview.",
+    "crumbs": [
+      "Publications and resources",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>BHRC neuroimaging publications</span>"
+    ]
+  },
+  {
+    "objectID": "02p01_neuroimaging_publications.html#bhrc-structural-mri-studies",
+    "href": "02p01_neuroimaging_publications.html#bhrc-structural-mri-studies",
+    "title": "11  BHRC neuroimaging publications",
+    "section": "11.2 BHRC structural MRI studies",
+    "text": "11.2 BHRC structural MRI studies\n\n\n\n\nAuthors, year and link\nPublication\nUse of BHRC data\n\n\n\n\nAxelrud et al. (2018)\nPolygenic Risk Score for Alzheimer’s Disease: Implications for Memory Performance and Hippocampal Volumes in Early Life\nHippocampal volumes derived using MAGeT.\n\n\nde Araujo et al. (2018)\nEffects of the brain-derived neurotrophic factor variant Val66Met on cortical structure in late childhood and early adolescence\nBaseline cortical thickness.\n\n\nde Araujo et al. (2020)\nAre serum brain-derived neurotrophic factor concentrations related to brain structure and psychopathology in late childhood and early adolescence?\nCortical thickness and subcortical volumes.\n\n\nAxelrud et al. (2021)\nNeuroimaging Association Scores: reliability and validity of aggregate measures of brain structural features linked to mental disorders in youth\nCortical and subcortical FreeSurfer measures used to construct and validate aggregate structural scores.\n\n\nManfro et al. (2021)\nTesting the Stability and Validity of an Executive Dysfunction Classification Using Task-Based Assessment in Children and Adolescents\nIntracranial volume and regional cortical surface area used as external validators.\n\n\nSalto et al. (2021)\nObsessive-Compulsive Symptoms, Polygenic Risk Score, and Thalamic Development in Children From the Brazilian High-Risk Cohort for Mental Conditions\nLongitudinal thalamic volume change.\n\n\nBorges et al. (2023)\nDeviations from a typical development of the cerebellum in youth are associated with psychopathology, executive functions and educational outcomes\nCerebellar volume derived using MAGeT.\n\n\nMendes et al. (2023)\nGeneralizability of 3D CNN models for age estimation in diverse youth populations using structural MRI\nWhole-brain T1 images used for convolutional neural-network age estimation.\n\n\nMendes et al. (2024)\nGPT-based normative models of brain sMRI correlate with dimensional psychopathology\nStructural MRI used to train and evaluate individualized gray-matter normative models.\n\n\nGrevet et al. (2024)\nThe association between duration of breastfeeding and the trajectory of brain development from childhood to young adulthood: an 8-year longitudinal study\nLongitudinal global cortical thickness, surface area, and intracranial volume.\n\n\nDoretto et al. (2024)\nChildhood maltreatment and the structural development of hippocampus across childhood and adolescence\nThree-wave bilateral hippocampal volumes.\n\n\nDuarte et al. (2025)\nEnhanced neurobiological biomarker differentiation for attention-deficit/hyperactivity disorder through a risk-informed design\nSubcortical volumes evaluated alongside PGS and executive function in an ADHD risk-informed design.\n\n\nTrejos-Castillo et al. (2025)\nCan socioeconomic status moderate the effect of a conflictive family environment on brain structure and externalizing/internalizing behavior in children and adolescents?\nAmygdala and hippocampal volumes.\n\n\nSalto et al. (2025)\nMachine learning for anxiety diagnosis using structural MRI does not generalize to unseen data: results from a large developmental cohort\nRegional structural features used for feature selection and generalizability testing.",
+    "crumbs": [
+      "Publications and resources",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>BHRC neuroimaging publications</span>"
+    ]
+  },
+  {
+    "objectID": "02p01_neuroimaging_publications.html#bhrc-resting-state-functional-mri-studies",
+    "href": "02p01_neuroimaging_publications.html#bhrc-resting-state-functional-mri-studies",
+    "title": "11  BHRC neuroimaging publications",
+    "section": "11.3 BHRC resting-state functional MRI studies",
+    "text": "11.3 BHRC resting-state functional MRI studies\n\n\n\n\nAuthors, year and link\nPublication\nUse of BHRC data\n\n\n\n\nSato et al. (2015)\nTemporal stability of network centrality in control and default mode networks: Specific associations with externalizing psychopathology in children and adolescents\nNetwork centrality and externalizing psychopathology.\n\n\nSato et al. (2016)\nDefault mode network maturation and psychopathology in children and adolescents\nDefault-mode-network maturation using fractional amplitude of low-frequency fluctuations.\n\n\nSato et al. (2016)\nConnectome hubs at resting state in children and adolescents: Reproducibility and psychopathological correlation\nEigenvector-centrality hubs across the two study sites.\n\n\nPan et al. (2017)\nVentral Striatum Functional Connectivity as a Predictor of Adolescent Depressive Disorder in a Longitudinal Community-Based Sample\nBaseline ventral-striatal connectivity used to predict later depression.\n\n\nHoexter et al. (2018)\nLow frequency fluctuation of brain spontaneous activity and obsessive-compulsive symptoms in a large school-age sample\nResting-state low-frequency activity and obsessive-compulsive symptoms.\n\n\nAxelrud et al. (2019)\nGenetic risk for Alzheimer’s disease and functional brain connectivity in children and adolescents\nAlzheimer’s disease polygenic risk and resting-state connectivity.\n\n\nRebello et al. (2019)\nAssociation between spontaneous activity of the default mode network hubs and leukocyte telomere length in late childhood and early adolescence\nDefault-mode-network activity and leukocyte telomere length.\n\n\nBiazoli et al. (2020)\nSocioeconomic status in children is associated with spontaneous activity in right superior temporal gyrus\nSocioeconomic status, spontaneous activity, and behavioral problems.\n\n\nRebello et al. (2022)\nAssociations between Family Functioning and Maternal Behavior on Default Mode Network Connectivity in School-Age Children\nWithin-network default-mode connectivity and family environment.\n\n\nSato et al. (2023)\nPolygenic risk score for attention-deficit/hyperactivity disorder and brain functional networks segregation in a community-based sample\nLongitudinal network segregation, ADHD polygenic risk, and symptoms.",
+    "crumbs": [
+      "Publications and resources",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>BHRC neuroimaging publications</span>"
+    ]
+  },
+  {
+    "objectID": "02p01_neuroimaging_publications.html#multicohort-studies-and-shared-resources",
+    "href": "02p01_neuroimaging_publications.html#multicohort-studies-and-shared-resources",
+    "title": "11  BHRC neuroimaging publications",
+    "section": "11.4 Multicohort studies and shared resources",
+    "text": "11.4 Multicohort studies and shared resources\n\n\n\n\nAuthors, year and link\nPublication\nUse of BHRC data\n\n\n\n\nParker et al. (2020)\nCorticosteroids and Regional Variations in Thickness of the Human Cerebral Cortex across the Lifespan\nCortical-thickness data contributed to a lifespan analysis.\n\n\nParker et al. (2020)\nAssessment of Neurobiological Mechanisms of Cortical Thinning During Childhood and Adolescence and Their Implications for Psychiatric Disorders\nLongitudinal cortical-thickness data contributed to a multicohort analysis.\n\n\nVidal-Pineiro et al. (2020)\nCellular correlates of cortical thinning throughout the lifespan\nChildhood and adolescent replication dataset.\n\n\nHarrewijn et al. (2021)\nCortical and subcortical brain structure in generalized anxiety disorder: findings from 28 research sites in the ENIGMA-Anxiety Working Group\nTwo BHRC scanner-site samples included in the ENIGMA-Anxiety analysis.\n\n\nBrouwer et al. (2022)\nGenetic variants associated with longitudinal changes in brain structure across the lifespan\nLongitudinal imaging-genetics contribution.\n\n\nBethlehem et al. (2022)\nBrain charts for the human lifespan\nStructural images contributed to normative lifespan charts.\n\n\nHilbert et al. (2024)\nCortical and subcortical brain alterations in specific phobia and its subtypes: a mega-analysis from the ENIGMA-Anxiety Working Group\nRegional structural data included in an ENIGMA-Anxiety analysis.\n\n\nMehta et al. (2025)\nReproducible Brain Charts: An open data resource for mapping brain development and its associations with mental health\nStructural and functional derivatives included in a shared developmental resource.\n\n\nBas-Hoogendam et al. (2026)\nStructural Brain Correlates of Childhood Inhibited Temperament: An ENIGMA-Anxiety Mega-Analysis\nBHRC cortical and subcortical measures contributed to the international mega-analysis.\n\n\nRichier et al. (2026)\nBrain age prediction in generalized anxiety disorder using a convolutional neural network\nStructural MRI contributed to an ENIGMA-Anxiety brain-age analysis.\n\n\nSchuurmans et al. (2026)\nConsortium profile: the Methylation, Imaging and NeuroDevelopment consortium\nBHRC identified as a participating developmental neuroimaging and DNA-methylation cohort.",
+    "crumbs": [
+      "Publications and resources",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>BHRC neuroimaging publications</span>"
+    ]
+  },
+  {
+    "objectID": "02p01_neuroimaging_publications.html#preprints",
+    "href": "02p01_neuroimaging_publications.html#preprints",
+    "title": "11  BHRC neuroimaging publications",
+    "section": "11.5 Preprints",
+    "text": "11.5 Preprints\n\n\n\n\nAuthors, year and link\nPublication\nUse of BHRC data\n\n\n\n\nMansour et al. (2025)\nSpectral normative modeling of brain structure\nShared structural derivatives contributed to large-scale normative modeling.\n\n\nJones et al. (2025)\nImproved Estimation of Correlation Accuracy for Machine Learning Brain-Phenotype Associations\nReproducible Brain Charts derivatives used to evaluate prediction-accuracy estimators.",
+    "crumbs": [
+      "Publications and resources",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>BHRC neuroimaging publications</span>"
+    ]
+  },
+  {
+    "objectID": "02p02_pgs_publications.html",
+    "href": "02p02_pgs_publications.html",
+    "title": "12  BHRC polygenic score publications",
+    "section": "",
+    "text": "12.1 Publications\nCurated by: Lucas Toshio Ito - UNIFESP\nlucas.toshio.ito@gmail.com\nLiterature reviewed through August 21, 2026\nThis page lists peer-reviewed publications verified as applying polygenic scores (PGS or PRS) in the Brazilian High-Risk Cohort for Mental Health Conditions (BHRC).",
+    "crumbs": [
+      "Publications and resources",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>BHRC polygenic score publications</span>"
+    ]
+  },
+  {
+    "objectID": "02p02_pgs_publications.html#publications",
+    "href": "02p02_pgs_publications.html#publications",
+    "title": "12  BHRC polygenic score publications",
+    "section": "",
+    "text": "Authors, year and link\nPublication\nUse of BHRC polygenic scores\n\n\n\n\nAxelrud et al. (2018)\nPolygenic Risk Score for Alzheimer’s Disease: Implications for Memory Performance and Hippocampal Volumes in Early Life\nAlzheimer’s disease PGS evaluated in relation to memory performance and hippocampal volume.\n\n\nAxelrud et al. (2019)\nGenetic risk for Alzheimer’s disease and functional brain connectivity in children and adolescents\nAlzheimer’s disease PGS evaluated in relation to resting-state functional connectivity.\n\n\nManfro et al. (2021)\nTesting the Stability and Validity of an Executive Dysfunction Classification Using Task-Based Assessment in Children and Adolescents\nADHD, educational-attainment, and schizophrenia PGS used as external validators of an executive-dysfunction classification.\n\n\nNavarro et al. (2021)\nPolyenvironmental and polygenic risk scores and the emergence of psychotic experiences in adolescents\nPsychotic-experience and schizophrenia PGS analyzed with environmental risk and adolescent psychotic experiences.\n\n\nSalto et al. (2021)\nObsessive-Compulsive Symptoms, Polygenic Risk Score, and Thalamic Development in Children From the Brazilian High-Risk Cohort for Mental Conditions\nObsessive-compulsive disorder PGS analyzed with symptoms and longitudinal thalamic development.\n\n\nAxelrud et al. (2023)\nDisentangling the influences of parental genetics on offspring’s cognition, education, and psychopathology via genetic and phenotypic pathways\nParent and offspring PGS for cognition, education, ADHD, and schizophrenia used to examine intergenerational pathways.\n\n\nLorenzi et al. (2023)\nReplication of a predictive model for youth ADHD in an independent sample from a developing country\nADHD PGS evaluated as an additional predictor in a longitudinal ADHD risk model.\n\n\nSato et al. (2023)\nPolygenic risk score for attention-deficit/hyperactivity disorder and brain functional networks segregation in a community-based sample\nADHD PGS analyzed with symptoms and longitudinal functional-network segregation.\n\n\nLeffa et al. (2024)\nThe synergistic effect of genetic and environmental factors in the development of attention-deficit/hyperactivity disorder symptoms in children and adolescents\nADHD PGS and an environmental risk score used to test gene-environment interaction.\n\n\nSalto et al. (2024)\nThe trajectory of anxiety symptoms during the transition from childhood to young adulthood is predicted by IQ and sex, but not polygenic risk scores\nMultiple psychiatric PGS tested as predictors of longitudinal anxiety-symptom trajectories.\n\n\nDoretto et al. (2024)\nChildhood maltreatment and the structural development of hippocampus across childhood and adolescence\nHippocampal-volume PGS included as a genetic covariate in longitudinal structural analyses.\n\n\nDuarte et al. (2025)\nEnhanced neurobiological biomarker differentiation for attention-deficit/hyperactivity disorder through a risk-informed design\nADHD PGS evaluated alongside subcortical volumes and executive function.\n\n\nBrañas, Ito et al. (2026)\nPolygenic Risk for Major Depression: Diagnostic Specificity and Developmental Trajectories in an Admixed Youth Cohort\nMajor-depression PGS analyzed across diagnoses, depressive trajectories, symptoms, and nonsuicidal self-injury.\n\n\nDamiano et al. (2026)\nDevelopmental predictors of suicide attempts from childhood to early adulthood: a 15-year prospective cohort study\nFive psychiatric and suicide-related PGS evaluated among developmental predictors of later suicide attempts.\n\n\nFonseca et al. (2026)\nExecutive function mediates the effects of genetic liability to schizophrenia on behavior and functioning in a community sample of children and adolescents\nSchizophrenia PGS analyzed with executive function, psychopathology, and school performance.\n\n\nOliveira et al. (2026)\nModerating effects of childhood deprivation and threat on the relationship between polygenic score and internalizing symptoms: A longitudinal analysis\nInternalizing-symptom PGS analyzed in interaction with childhood deprivation and threat.",
+    "crumbs": [
+      "Publications and resources",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>BHRC polygenic score publications</span>"
+    ]
+  },
+  {
+    "objectID": "02p02_pgs_publications.html#database-and-methods-resources",
+    "href": "02p02_pgs_publications.html#database-and-methods-resources",
+    "title": "12  BHRC polygenic score publications",
+    "section": "12.2 Database and methods resources",
+    "text": "12.2 Database and methods resources\n\nBHRC Polygenic Score Database v3.0 - score construction, available phenotypes, ancestry principal components, relatedness, standardization, and analysis guidance.\nPGS Data Dictionary - score names, phenotypes, and source information.\nPRS-CS and PRS-CSx - primary score-construction methods used in the current database.\n\nPGS associations in BHRC should be interpreted in light of ancestry mismatch, discovery-GWAS sample size, score version, relatedness, and the developmental stage of the cohort. See the PGS database documentation for analysis guidance.",
+    "crumbs": [
+      "Publications and resources",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>BHRC polygenic score publications</span>"
     ]
   },
   {
